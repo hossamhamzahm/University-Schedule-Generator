@@ -42,8 +42,11 @@ let main = async(): Promise<void> => {
         user.user_username = instructor_name[full_name].slice(0, Math.min(instructor_name[full_name].length, 30));
         [user.f_name, user.m_name, user.l_name] = full_name.split(' ');
 
-        await userStore.create(user);
-        await instructorStore.create({instructor_username: user.user_username, instructor_faculty: "EAS"})
+        await instructorStore.create({instructor_username: user.user_username,
+			f_name: user.f_name,
+			m_name: user.m_name,
+			l_name: user.l_name,
+			instructor_faculty: "EAS"})
 	}
 
 	// this part seeds the course model
@@ -65,7 +68,7 @@ let main = async(): Promise<void> => {
         await sectionStore.create(section);
 	}
 
-	console.log("\n\nSeeding finished, pres ctrl + c to exit.")
+	console.log("\n\nSeeding finished, press ctrl + c to exit.")
 }
 
 

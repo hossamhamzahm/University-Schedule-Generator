@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Router } from "express";
 import path from "path";
 import cors from "cors";
 import ExpressError from "./helper/ExpressError";
@@ -6,6 +6,7 @@ import ExpressError from "./helper/ExpressError";
 
 import CourseRouter from "./router/course";
 import SectionRouter from "./router/section";
+import InstructorRouter from './router/instructor'
 
 
 import dotenv from "dotenv";
@@ -27,13 +28,13 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use("/courses", CourseRouter);
 app.use("/sections", SectionRouter);
+app.use("/instructors", InstructorRouter);
 
 
 
 // Catching falsy endpoints
 app.get("*", (req: express.Request, res: express.Response, next: express.NextFunction) => {
     return next(new ExpressError("Endpoint not found!", 404))
-	res.status(404).send("OK");
 });
 
 
