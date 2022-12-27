@@ -11,6 +11,7 @@ let Pool: mysql.Pool;
 
 if (ENV === "dev") {
 	Pool = mysql.createPool({
+		multipleStatements: true,
 		host: DB_HOST,
 		password: DB_PASSWORD,
 		user: DB_USER,

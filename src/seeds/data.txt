@@ -1,0 +1,1907 @@
+ECEN101: Electric Circuits
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 12:29 PM
+
+Thursday
+
+Nile University, UB1, Floor GUB1, Room 145
+Lobna Ahmed Said
+3.00
+Credits
+5
+
+Seats Left
+
+ECEN101: Electric Circuits
+Section: 02 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 12:29 PM
+
+Monday
+
+Nile University, UB2, Floor FUB2, Room F48
+Lobna Ahmed Said
+3.00
+Credits
+29
+
+Seats Left
+
+ECEN101: Electric Circuits
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 1:20 PM
+
+Monday
+
+Nile University, UB2, Floor FUB2, Room F31
+Alaa Osama Abdelfattah
+0.00
+Credits
+7
+
+Seats Left
+
+ECEN101: Electric Circuits
+Section: 01B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 1:29 PM
+
+Thursday
+
+Nile University, UB1, Floor GUB1, Room 145
+Alaa Osama Abdelfattah
+0.00
+Credits
+0
+Seats Left
+
+ECEN101: Electric Circuits
+Section: 01A | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 1:29 PM
+
+Tuesday
+
+Nile University, UB2, Floor GUB2, Room G25
+Yasmeen Waleed Etman
+0.00
+Credits
+5
+
+Seats Left
+
+ECEN101: Electric Circuits
+Section: 01B | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+11:30 AM - 12:29 PM
+
+Wednesday
+
+Nile University, UB2, Floor GUB2, Room G25
+Yasmeen Waleed Etman
+0.00
+Credits
+0
+Seats Left
+
+ECEN101: Electric Circuits
+Section: 01C | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+11:30 AM - 12:29 PM
+
+Tuesday
+
+Nile University, UB2, Floor GUB2, Room G25
+Yasmeen Waleed Etman
+0.00
+Credits
+1
+
+Seats Left
+
+ECEN101: Electric Circuits
+Section: 02A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+1:30 PM - 2:29 PM
+
+Tuesday
+
+Nile University, UB1, Floor GUB1, Room 144
+Alaa Osama Abdelfattah
+0.00
+Credits
+9
+
+Seats Left
+
+ECEN101: Electric Circuits
+Section: 02B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 3:29 PM
+
+Tuesday
+
+Nile University, UB2, Floor FUB2, Room F44
+Alaa Osama Abdelfattah
+0.00
+Credits
+23
+Seats Left
+
+ECEN101: Electric Circuits
+Section: 02A | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 11:29 AM
+
+Wednesday
+
+Nile University, UB2, Floor GUB2, Room G25
+Yasmeen Waleed Etman
+0.00
+Credits
+1
+
+Seats Left
+
+ECEN101: Electric Circuits
+Section: 02B | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+8:30 AM - 9:29 AM
+
+Wednesday
+
+Nile University, UB2, Floor GUB2, Room G25
+Yasmeen Waleed Etman
+0.00
+Credits
+17
+Seats Left
+
+ECEN101: Electric Circuits
+Section: 02C | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+9:30 AM - 10:20 AM
+
+Wednesday
+
+Nile University, UB2, Floor GUB2, Room G25
+Yasmeen Waleed Etman
+0.00
+Credits
+8
+
+Seats Left
+
+ECEN101: Electric Circuits
+Section: 03 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 4:20 PM
+
+Wednesday
+
+Nile University, UB1, Floor GUB1, Room 145
+Lobna Ahmed Said
+3.00
+Credits
+49
+Seats Left
+
+ECEN101: Electric Circuits
+Section: 03C | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 1:20 PM
+
+Sunday
+
+Nile University, UB2, Floor GUB2, Room G25
+Yasmeen Waleed Etman
+0.00
+Credits
+14
+Seats Left
+
+ECEN101: Electric Circuits
+Section: 03A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+1:30 PM - 2:20 PM
+
+Monday
+
+Nile University, UB1, Floor GUB1, Room 148
+Alaa Osama Abdelfattah
+0.00
+Credits
+22
+Seats Left
+
+ECEN101C: Electric Circuits
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+11:30 AM - 1:20 PM
+
+Thursday
+
+Nile University, UB1, Floor GUB1, Room 144
+Nariman Abdo Khalil
+3.00
+Credits
+18
+
+Seats Left
+
+ECEN101C: Electric Circuits
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+8:30 AM - 9:20 AM
+
+Tuesday
+
+Nile University, UB2, Floor GUB2, Room G25
+Silvana Atef Fathy Nazir Girges
+0.00
+Credits
+12
+
+Seats Left
+
+ECEN101C: Electric Circuits
+Section: 01B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+3:30 PM - 4:20 PM
+
+Monday
+
+Nile University, UB1, Floor GUB1, Room 101
+Silvana Atef Fathy Nazir Girges
+0.00
+Credits
+7
+
+Seats Left
+
+ECEN101C: Electric Circuits
+Section: 01A | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+9:30 AM - 10:20 AM
+
+Tuesday
+
+Nile University, UB2, Floor GUB2, Room G25
+Mariam Salah Kandil
+0.00
+Credits
+2
+
+Seats Left
+
+ECEN101C: Electric Circuits
+Section: 01B | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+3:30 PM - 4:20 PM
+
+Sunday
+
+Nile University, UB2, Floor GUB2, Room G25
+Yasmeen Waleed Etman
+0.00
+Credits
+14
+Seats Left
+
+ECEN101C: Electric Circuits
+Section: 01C | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 3:20 PM
+
+Thursday
+
+Nile University, UB2, Floor GUB2, Room G25
+Mariam Salah Kandil
+0.00
+Credits
+2
+
+Seats Left
+
+ECEN101C: Electric Circuits
+Section: 02 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 4:20 PM
+
+Thursday
+
+Nile University, UB2, Floor FUB2, Room F46
+Lobna Ahmed Said
+3.00
+Credits
+0
+Seats Left
+
+ECEN101C: Electric Circuits
+Section: 03 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 4:20 PM
+
+Sunday
+
+Nile University, UB1, Room 306
+Ahmed Mohamed Abdelwahab Mahmoud
+3.00
+Credits
+28
+
+Seats Left
+
+ECEN101C: Electric Circuits
+Section: 02A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+3:30 PM - 4:20 PM
+
+Sunday
+
+Nile University, UB1, Floor GUB1, Room 159
+Silvana Atef Fathy Nazir Girges
+0.00
+Credits
+0
+Seats Left
+
+ECEN101C: Electric Circuits
+Section: 02B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 11:20 AM
+
+Monday
+
+Nile University, UB2, Floor FUB2, Room F43
+Alaa Osama Abdelfattah
+0.00
+Credits
+9
+
+Seats Left
+
+ECEN101C: Electric Circuits
+Section: 03A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+9:30 AM - 10:20 AM
+
+Thursday
+
+Nile University, UB2, Floor FUB2, Room F44
+Alaa Osama Abdelfattah
+0.00
+Credits
+9
+
+Seats Left
+
+ECEN101C: Electric Circuits
+Section: 03B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 3:20 PM
+
+Thursday
+
+Nile University, UB2, Floor FUB2, Room F44
+Silvana Atef Fathy Nazir Girges
+0.00
+Credits
+19
+Seats Left
+
+ECEN101C: Electric Circuits
+Section: 02A | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 11:20 AM
+
+Monday
+
+Nile University, UB2, Floor GUB2, Room G25
+Mariam Salah Kandil
+0.00
+Credits
+0
+Seats Left
+
+ECEN101C: Electric Circuits
+Section: 02B | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+4:30 PM - 5:20 PM
+
+Monday
+
+Nile University, UB2, Floor GUB2, Room G25
+Mariam Salah Kandil
+0.00
+Credits
+0
+Seats Left
+
+ECEN101C: Electric Circuits
+Section: 02C | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+9:30 AM - 10:20 AM
+
+Monday
+
+Nile University, UB2, Floor GUB2, Room G25
+Mariam Salah Kandil
+0.00
+Credits
+2
+
+Seats Left
+
+ECEN101C: Electric Circuits
+Section: 03A | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+3:30 PM - 4:20 PM
+
+Thursday
+
+Nile University, UB2, Floor GUB2, Room G25
+Mariam Salah Kandil
+0.00
+Credits
+1
+
+Seats Left
+
+ECEN101C: Electric Circuits
+Section: 03C | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+9:30 AM - 10:20 AM
+
+Sunday
+
+Nile University, UB2, Floor GUB2, Room G25
+Yasmeen Waleed Etman
+0.00
+Credits
+6
+
+Seats Left
+
+ECEN202: Fundamentals of Electrical Engineering
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 4:20 PM
+
+Thursday
+
+Nile University, UB2, Floor FUB2, Room F45
+Nariman Abdo Khalil
+3.00
+Credits
+34
+Seats Left
+
+ECEN202: Fundamentals of Electrical Engineering
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+1:30 PM - 2:20 PM
+
+Wednesday
+
+Nile University, UB2, Floor F, Room F26
+Mohamed Abdallah Elshafey
+0.00
+Credits
+19
+Seats Left
+
+ECEN202: Fundamentals of Electrical Engineering
+Section: 01B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 3:20 PM
+
+Monday
+
+Nile University, UB2, Floor FUB2, Room F33
+Mohamed Abdallah Elshafey
+0.00
+Credits
+15
+
+Seats Left
+
+ECEN202: Fundamentals of Electrical Engineering
+Section: 01A | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 1:20 PM
+
+Wednesday
+
+Nile University, UB2, Floor F, Room F26
+Mohamed Abdallah Elshafey
+0.00
+Credits
+11
+Seats Left
+
+ECEN202: Fundamentals of Electrical Engineering
+Section: 01B | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+3:30 PM - 4:20 PM
+
+Monday
+
+Nile University, UB2, Floor GUB2, Room G25
+Mohamed Abdallah Elshafey
+0.00
+Credits
+3
+
+Seats Left
+
+ECEN305: Introduction to Computer Systems
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 4:29 PM
+
+Sunday
+
+Nile University, UB1, Floor GUB1, Room 116
+Mohamed Saeed Darweesh
+3.00
+Credits
+0
+Seats Left
+
+ECEN305: Introduction to Computer Systems
+Section: 02 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 12:29 PM
+
+Monday
+
+Nile University, UB1, Room 331
+Mohamed Saeed Darweesh
+3.00
+Credits
+24
+
+Seats Left
+
+ECEN305: Introduction to Computer Systems
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 3:29 PM
+
+Tuesday
+
+Nile University, UB1, Room 364
+Kareem Mohamed Moussa
+0.00
+Credits
+0
+Seats Left
+
+ECEN305: Introduction to Computer Systems
+Section: 01B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 1:29 PM
+
+Tuesday
+
+Nile University, UB1, Floor GUB1, Room 116
+Kareem Mohamed Moussa
+0.00
+Credits
+8
+
+Seats Left
+
+ECEN305: Introduction to Computer Systems
+Section: 01A | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+9:30 AM - 10:29 AM
+
+Thursday
+
+Nile University, UB1, Floor BUB1, Room 01
+Kareem Mohamed Moussa
+0.00
+Credits
+5
+
+Seats Left
+
+ECEN305: Introduction to Computer Systems
+Section: 01B | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+8:30 AM - 9:29 AM
+
+Thursday
+
+Nile University, UB1, Floor BUB1, Room 01
+Kareem Mohamed Moussa
+0.00
+Credits
+21
+Seats Left
+
+ECEN305: Introduction to Computer Systems
+Section: 01C | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+1:30 PM - 2:20 PM
+
+Wednesday
+
+Nile University, UB2, Floor GUB2, Room G17
+Kareem Mohamed Moussa
+0.00
+Credits
+0
+Seats Left
+
+ECEN305: Introduction to Computer Systems
+Section: 02A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 1:29 PM
+
+Thursday
+
+Nile University, UB1, Floor GUB1, Room 159
+Kareem Mohamed Moussa
+0.00
+Credits
+1
+
+Seats Left
+
+ECEN305: Introduction to Computer Systems
+Section: 02A | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+11:30 AM - 12:29 PM
+
+Wednesday
+
+Nile University, UB1, Floor BUB1, Room 01
+Kareem Mohamed Moussa
+0.00
+Credits
+15
+
+Seats Left
+
+ECEN305: Introduction to Computer Systems
+Section: 02B | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 11:29 AM
+
+Thursday
+
+Nile University, UB1, Floor FUB1, Room 265
+Kareem Mohamed Moussa
+0.00
+Credits
+9
+
+Seats Left
+
+ECEN311: Analysis and Design of Analog Circuits
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 4:29 PM
+
+Thursday
+
+Nile University, UB1, Floor GUB1, Room 142
+Ahmed Hassan Madian
+3.00
+Credits
+2
+
+Seats Left
+
+ECEN311: Analysis and Design of Analog Circuits
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+8:30 AM - 9:29 AM
+
+Wednesday
+
+Nile University, UB1, Floor GUB1, Room 101
+Mohamed Abdallah Elshafey
+0.00
+Credits
+3
+
+Seats Left
+
+ECEN311: Analysis and Design of Analog Circuits
+Section: 01B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+9:30 AM - 10:29 AM
+
+Wednesday
+
+Nile University, UB1, Floor GUB1, Room 101
+Mohamed Abdallah Elshafey
+0.00
+Credits
+9
+
+Seats Left
+
+ECEN311: Analysis and Design of Analog Circuits
+Section: 01A | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+1:30 PM - 2:20 PM
+
+Monday
+
+Nile University, UB1, Floor BUB1, Room 052
+Mohamed Abdallah Elshafey
+0.00
+Credits
+4
+
+Seats Left
+
+ECEN311: Analysis and Design of Analog Circuits
+Section: 01B | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 1:20 PM
+
+Monday
+
+Nile University, UB1, Floor BUB1, Room 052
+Mohamed Abdallah Elshafey
+0.00
+Credits
+17
+Seats Left
+
+ECEN311: Analysis and Design of Analog Circuits
+Section: 01C | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 1:29 PM
+
+Thursday
+
+Nile University, UB2, Floor GUB2, Room G25
+Mohamed Abdallah Elshafey
+0.00
+Credits
+15
+
+Seats Left
+
+ECEN311: Analysis and Design of Analog Circuits
+Section: 01D | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+1:30 PM - 2:29 PM
+
+Thursday
+
+Nile University, UB2, Floor GUB2, Room G25
+Mohamed Abdallah Elshafey
+0.00
+Credits
+4
+
+Seats Left
+
+ECEN313: Signals and Systems
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 2:20 PM
+
+Monday
+
+Nile University, UB1, Floor BUB1, Room 9
+Tawfik Ismail Ismail
+3.00
+Credits
+0
+Seats Left
+
+ECEN313: Signals and Systems
+Section: 02 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 4:20 PM
+
+Monday
+
+Nile University, UB1, Floor BUB1, Room 8
+Tawfik Ismail Ismail
+3.00
+Credits
+32
+Seats Left
+
+ECEN313: Signals and Systems
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+11:30 AM - 12:29 PM
+
+Tuesday
+
+Nile University, UB1, Floor GUB1, Room 154
+Mariam Salah Kandil
+0.00
+Credits
+2
+
+Seats Left
+
+ECEN313: Signals and Systems
+Section: 01B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+9:30 AM - 10:29 AM
+
+Wednesday
+
+Nile University, UB2, Floor FUB2, Room F37
+Mariam Salah Kandil
+0.00
+Credits
+0
+Seats Left
+
+ECEN313: Signals and Systems
+Section: 01A | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+1:30 PM - 2:20 PM
+
+Thursday
+
+Nile University, UB2, Floor GUB2, Room G17
+Mariam Salah Kandil
+0.00
+Credits
+0
+Seats Left
+
+ECEN313: Signals and Systems
+Section: 01B | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+6:30 PM - 7:29 PM
+
+Monday
+
+Nile University, UB2, Floor GUB2, Room G29
+Mariam Salah Kandil
+0.00
+Credits
+23
+Seats Left
+
+ECEN313: Signals and Systems
+Section: 01C | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+5:30 PM - 6:29 PM
+
+Monday
+
+Nile University, UB2, Floor GUB2, Room G18
+Mariam Salah Kandil
+0.00
+Credits
+3
+
+Seats Left
+
+ECEN313: Signals and Systems
+Section: 02A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 11:29 AM
+
+Tuesday
+
+Nile University, UB1, Floor GUB1, Room 154
+Mariam Salah Kandil
+0.00
+Credits
+1
+
+Seats Left
+
+ECEN313: Signals and Systems
+Section: 02A | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+8:30 AM - 9:29 AM
+
+Wednesday
+
+Nile University, UB2, Floor GUB2, Room G18
+Mariam Salah Kandil
+0.00
+Credits
+17
+Seats Left
+
+ECEN313: Signals and Systems
+Section: 02B | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+11:30 AM - 12:29 PM
+
+Thursday
+
+Nile University, UB2, Floor GUB2, Room G17
+Mariam Salah Kandil
+0.00
+Credits
+15
+
+Seats Left
+
+ECEN316: Electric Machines
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 4:20 PM
+
+Wednesday
+
+Nile University, UB1, Room 230
+Tarek Abdelbadee Boghdady
+3.00
+Credits
+5
+
+Seats Left
+
+ECEN316: Electric Machines
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+8:30 AM - 10:20 AM
+
+Monday
+
+Nile University, UB1, Room 301
+Alaa Osama Abdelfattah
+0.00
+Credits
+1
+
+Seats Left
+
+ECEN316: Electric Machines
+Section: 01B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 4:29 PM
+
+Monday
+
+Nile University, UB1, Floor GUB1, Room 154
+Alaa Osama Abdelfattah
+0.00
+Credits
+8
+
+Seats Left
+
+ECEN316: Electric Machines
+Section: 02 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 12:20 PM
+
+Wednesday
+
+Nile University, UB1, Room 230
+Tarek Abdelbadee Boghdady
+3.00
+Credits
+24
+
+Seats Left
+
+ECEN316: Electric Machines
+Section: 02B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+8:30 AM - 10:29 AM
+
+Tuesday
+
+Nile University, UB1, Floor GUB1, Room 145
+Alaa Osama Abdelfattah
+0.00
+Credits
+0
+Seats Left
+
+ECEN351: Fundamentals of Semiconductor Devices
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+8:30 AM - 10:20 AM
+
+Sunday
+
+Nile University, UB2, Floor FUB2, Room F42
+Nouran Mohamed Abdelrazek
+3.00
+Credits
+36
+Seats Left
+
+ECEN351: Fundamentals of Semiconductor Devices
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 12:29 PM
+
+Sunday
+
+Nile University, UB1, Floor FUB1, Room 265
+Mohamed Abdallah Elshafey
+0.00
+Credits
+18
+Seats Left
+
+ECEN351: Fundamentals of Semiconductor Devices
+Section: 01B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 12:29 PM
+
+Thursday
+
+Nile University, UB1, Floor GUB1, Room 155
+Mohamed Abdallah Elshafey
+0.00
+Credits
+18
+Seats Left
+
+ECEN371: Fundamentals of Electromagnetics
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 12:29 PM
+
+Monday
+
+Nile University, UB2, Floor FUB2, Room F38
+Ahmed Mohamed Abdelwahab Mahmoud
+3.00
+Credits
+26
+
+Seats Left
+
+ECEN371: Fundamentals of Electromagnetics
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 2:29 PM
+
+Tuesday
+
+Nile University, UB2, Floor FUB2, Room F37
+Mohamed Abdallah Elshafey
+0.00
+Credits
+12
+
+Seats Left
+
+ECEN371: Fundamentals of Electromagnetics
+Section: 01B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 4:29 PM
+
+Tuesday
+
+Nile University, UB1, Floor GUB1, Room 154
+Mohamed Abdallah Elshafey
+0.00
+Credits
+14
+
+Seats Left
+
+ECEN406: Microprocessor System Design
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 12:29 PM
+
+Monday
+
+Nile University, UB1, Floor GUB1, Room 142
+Ahmed Soltan Abdelaal
+3.00
+Credits
+0
+Seats Left
+
+ECEN406: Microprocessor System Design
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 4:29 PM
+
+Wednesday
+
+Nile University, UB2, Floor GUB2, Room G25
+Aya Mohamed Safan
+0.00
+Credits
+1
+
+Seats Left
+
+ECEN406: Microprocessor System Design
+Section: 01B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 2:20 PM
+
+Wednesday
+
+Nile University, UB2, Floor FUB2, Room F42
+Aya Mohamed Safan
+0.00
+Credits
+0
+Seats Left
+
+ECEN406: Microprocessor System Design
+Section: 01C | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 2:20 PM
+
+Thursday
+
+Nile University, UB1, Floor GUB1, Room 139
+Aya Mohamed Safan
+0.00
+Credits
+30
+Seats Left
+
+ECEN421: Introduction to Computer Networks
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+11:30 AM - 1:29 PM
+
+Tuesday
+
+Nile University, UB1, Floor GUB1, Room 132
+Mohamed Saeed Darweesh
+3.00
+Credits
+13
+
+Seats Left
+
+ECEN421: Introduction to Computer Networks
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 4:29 PM
+
+Monday
+
+Nile University, UB1, Floor FUB1, Room 233
+Kareem Mohamed Moussa
+0.00
+Credits
+0
+Seats Left
+
+ECEN421: Introduction to Computer Networks
+Section: 01B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 4:29 PM
+
+Thursday
+
+Nile University, UB1, Floor GUB1, Room 150
+Kareem Mohamed Moussa
+0.00
+Credits
+21
+Seats Left
+
+ECEN422: Introduction to Computer Security
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 2:20 PM
+
+Wednesday
+
+Nile University, UB1, Floor GUB1, Room 138
+Tawfik Ismail Ismail
+3.00
+Credits
+10
+
+Seats Left
+
+ECEN422: Introduction to Computer Security
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 4:20 PM
+
+Thursday
+
+Nile University, UB1, Floor GUB1, Room 106
+Aya Mohamed Safan
+0.00
+Credits
+7
+
+Seats Left
+
+ECEN422: Introduction to Computer Security
+Section: 01B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+3:00 AM - 2:20 PM
+
+Monday
+
+Nile University, UB1, Floor GUB1, Room 154
+Aya Mohamed Safan
+0.00
+Credits
+3
+
+Seats Left
+
+ECEN424: Introduction to Databases Systems
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+8:30 AM - 10:29 AM
+
+Sunday
+
+Nile University, UB1, Floor GUB1, Room 111
+Mona Mohamed Arafa
+3.00
+Credits
+14
+
+Seats Left
+
+ECEN424: Introduction to Databases Systems
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 4:29 PM
+
+Thursday
+
+Nile University, UB1, Floor FUB1, Room 264
+Instructor pending
+0.00
+Credits
+6
+
+Seats Left
+
+ECEN427: Operating Systems
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+5:30 PM - 7:20 PM
+
+Tuesday
+
+Nile University, UB1, Floor GUB1, Room 111
+Soha Safwat Labib
+3.00
+Credits
+11
+
+Seats Left
+
+ECEN427: Operating Systems
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+1:30 PM - 2:29 PM
+
+Tuesday
+
+Nile University, UB1, Floor GUB1, Room 154
+Multiple instructors
+0.00
+Credits
+0
+Seats Left
+
+ECEN427: Operating Systems
+Section: 01B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+1:30 PM - 2:29 PM
+
+Thursday
+
+Nile University, UB1, Floor GUB1, Room 154
+Multiple instructors
+0.00
+Credits
+12
+
+Seats Left
+
+ECEN427: Operating Systems
+Section: 01A | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+4:30 PM - 5:20 PM
+
+Tuesday
+
+Nile University, UB1, Floor BUB1, Room 01
+Multiple instructors
+0.00
+Credits
+25
+Seats Left
+
+ECEN427: Operating Systems
+Section: 01B | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+9:30 AM - 10:29 AM
+
+Tuesday
+
+Nile University, UB1, Floor BUB1, Room 01
+Multiple instructors
+0.00
+Credits
+17
+Seats Left
+
+ECEN427: Operating Systems
+Section: 01C | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+1:30 PM - 2:29 PM
+
+Monday
+
+Nile University, UB2, Floor GUB2, Room G17
+Multiple instructors
+0.00
+Credits
+0
+Seats Left
+
+ECEN430: S.T.in Com.Eng(Intermediate Programming)
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+8:30 AM - 10:29 AM
+
+Wednesday
+
+Nile University, UB2, Floor FUB2, Room F45
+Ahmed Mahmoud Elshafee
+3.00
+Credits
+35
+Seats Left
+
+ECEN430: S.T.in Com.Eng (Internet of Things)
+Section: 02 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 12:20 PM
+
+Sunday
+
+Nile University, UB2, Floor FUB2, Room F37
+Multiple instructors
+3.00
+Credits
+30
+
+Seats Left
+
+ECEN430: S.T.in Com.Eng(Intermediate Programming)
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 11:20 AM
+
+Wednesday
+
+Nile University, UB1, Floor BUB1, Room 01
+Mahmoud Mostafa Tayee
+0.00
+Credits
+19
+Seats Left
+
+ECEN430: S.T.in Com.Eng(Intermediate Programming)
+Section: 01B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+11:30 AM - 12:20 PM
+
+Thursday
+
+Nile University, UB1, Floor GUB1, Room 134
+Mahmoud Mostafa Tayee
+0.00
+Credits
+16
+Seats Left
+
+ECEN430: S.T.in Com.Eng(Intermediate Programming)
+Section: 01B | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+1:30 PM - 2:29 PM
+
+Thursday
+
+Nile University, UB1, Floor BUB1, Room 01
+Mahmoud Mostafa Tayee
+0.00
+Credits
+21
+Seats Left
+
+ECEN430: S.T.in Com.Eng(Intermediate Programming)
+Section: 01C | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 3:29 PM
+
+Thursday
+
+Nile University, UB1, Floor BUB1, Room 01
+Mahmoud Mostafa Tayee
+0.00
+Credits
+14
+
+Seats Left
+
+ECEN430: S.T.in Com.Eng (Internet of Things)
+Section: 02A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 4:20 PM
+
+Monday
+
+Nile University, UB2, Floor GUB2, Room G29
+Aya Mohamed Safan
+0.00
+Credits
+0
+Seats Left
+
+ECEN432: Introduction To Computer Architecture
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+8:30 AM - 10:20 AM
+
+Thursday
+
+Nile University, UB1, Floor GUB1, Room 139
+Islam Tharwat Abdelhaleem
+3.00
+Credits
+13
+
+Seats Left
+
+ECEN432: Introduction To Computer Architecture
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 1:20 PM
+
+Sunday
+
+Nile University, UB2, Floor FUB2, Room F37
+Rahma Mohamed Ahmed
+0.00
+Credits
+2
+
+Seats Left
+
+ECEN432: Introduction To Computer Architecture
+Section: 01B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 11:29 AM
+
+Wednesday
+
+Nile University, UB1, Floor GUB1, Room 138
+Mohamed Ibrahim Ragab
+0.00
+Credits
+11
+
+Seats Left
+
+ECEN432: Introduction To Computer Architecture
+Section: 01A | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+1:30 PM - 2:20 PM
+
+Sunday
+
+Nile University, UB2, Floor GUB2, Room G29
+Rahma Mohamed Ahmed
+0.00
+Credits
+13
+
+Seats Left
+
+ECEN432: Introduction To Computer Architecture
+Section: 01B | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 11:29 AM
+
+Thursday
+
+Nile University, UB1, Floor FUB1, Room 264
+Mohamed Ibrahim Ragab
+0.00
+Credits
+0
+Seats Left
+
+ECEN433: Introduction to Parallel Computing
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+8:30 AM - 10:20 AM
+
+Wednesday
+
+Nile University, UB1, Floor GUB1, Room 134
+Islam Tharwat Abdelhaleem
+3.00
+Credits
+43
+Seats Left
+
+ECEN433: Introduction to Parallel Computing
+Section: 01A | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 12:20 PM
+
+Thursday
+
+Nile University, UB2, Floor FUB2, Room F37
+Aya Mohamed Safan
+0.00
+Credits
+13
+
+Seats Left
+
+ECEN435: Embedded Real-Time Systems
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+11:30 AM - 1:29 PM
+
+Tuesday
+
+Nile University, UB1, Floor BUB1, Room 9
+Ahmed Soltan Abdelaal
+3.00
+Credits
+8
+
+Seats Left
+
+ECEN435: Embedded Real-Time Systems
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+4:30 PM - 5:20 PM
+
+Monday
+
+Nile University, UB1, Floor F1, Room 110
+Multiple instructors
+0.00
+Credits
+10
+
+Seats Left
+
+ECEN435: Embedded Real-Time Systems
+Section: 01A | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+11:30 AM - 12:29 PM
+
+Thursday
+
+Nile University, UB1, Floor BUB1, Room 28
+Multiple instructors
+0.00
+Credits
+5
+
+Seats Left
+
+ECEN435: Embedded Real-Time Systems
+Section: 01B | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 1:29 PM
+
+Thursday
+
+Nile University, UB1, Floor BUB1, Room 28
+Multiple instructors
+0.00
+Credits
+7
+
+Seats Left
+
+ECEN435: Embedded Real-Time Systems
+Section: 01C | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+4:30 PM - 5:20 PM
+
+Thursday
+
+Nile University, UB1, Floor BUB1, Room 28
+Multiple instructors
+0.00
+Credits
+26
+Seats Left
+
+ECEN435: Embedded Real-Time Systems
+Section: 01B | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+11:30 AM - 12:29 PM
+
+Wednesday
+
+Nile University, UB1, Floor GUB1, Room 116
+Multiple instructors
+0.00
+Credits
+0
+Seats Left
+
+ECEN452: Physical Sensors, Transducers & Instru
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+8:30 AM - 10:29 AM
+
+Monday
+
+Nile University, UB1, Floor GUB1, Room 138
+Ahmed Abo Bakr Ali
+3.00
+Credits
+38
+Seats Left
+
+ECEN452: Physical Sensors, Transducers & Instru
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 1:20 PM
+
+Monday
+
+Nile University, UB2, Floor GUB2, Room G25
+Mohamed Tarek Keshk
+0.00
+Credits
+8
+
+Seats Left
+
+ECEN452: Physical Sensors, Transducers & Instru
+Section: 01A | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+1:30 PM - 2:20 PM
+
+Monday
+
+Nile University, UB2, Floor GUB2, Room G25
+Mohamed Tarek Keshk
+0.00
+Credits
+8
+
+Seats Left
+
+ECEN453: Analog and Digital Electronics Lab
+Section: 02 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 2:29 PM
+
+Sunday
+
+Nile University, UB1, Floor FUB1, Room 216
+Ahmed Abo Bakr Ali
+3.00
+Credits
+27
+
+Seats Left
+
+ECEN453: Analog and Digital Electronics Lab
+Section: 02A | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 12:20 PM
+
+Thursday
+
+Nile University, UB2, Floor GUB2, Room G25
+Mohamed Abdallah Elshafey
+0.00
+Credits
+14
+
+Seats Left
+
+ECEN453: Analog and Digital Electronics Lab
+Section: 02B | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+4:30 PM - 6:20 PM
+
+Tuesday
+
+Nile University, UB2, Floor GUB2, Room G25
+Mohamed Abdallah Elshafey
+0.00
+Credits
+13
+
+Seats Left
+
+ECEN454: Analog & Digital Filters& Comm.Circuits
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+8:30 AM - 10:29 AM
+
+Sunday
+
+Nile University, UB1, Floor GUB1, Room 134
+Ahmed Hassan Madian
+3.00
+Credits
+42
+Seats Left
+
+ECEN454: Analog & Digital Filters& Comm.Circuits
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+10:30 AM - 11:29 AM
+
+Wednesday
+
+Nile University, UB2, Floor FUB2, Room F37
+Mohamed Abdallah Elshafey
+0.00
+Credits
+12
+
+Seats Left
+
+ECEN454: Analog & Digital Filters& Comm.Circuits
+Section: 01A | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+8:30 AM - 9:29 AM
+
+Thursday
+
+Nile University, UB1, Floor FUB1, Room 265
+Mohamed Abdallah Elshafey
+0.00
+Credits
+12
+
+Seats Left
+
+ECEN462: Digital Communications
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 4:29 PM
+
+Wednesday
+
+Nile University, UB1, Floor GUB1, Room 132
+Tawfik Ismail Ismail
+3.00
+Credits
+38
+Seats Left
+
+ECEN462: Digital Communications
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 1:29 PM
+
+Thursday
+
+Nile University, UB1, Floor GUB1, Room 101
+Mariam Salah Kandil
+0.00
+Credits
+8
+
+Seats Left
+
+ECEN462: Digital Communications
+Section: 01A | Session: Session 01 | Subtype: Lab
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+12:30 PM - 1:29 PM
+
+Tuesday
+
+Nile University, UB1, Floor BUB1, Room 28
+Mariam Salah Kandil
+0.00
+Credits
+8
+
+Seats Left
+
+ECEN463: Wireless Communication
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 4:20 PM
+
+Sunday
+
+Nile University, UB2, Floor SUB2, Room S44
+Tawfik Ismail Ismail
+3.00
+Credits
+42
+Seats Left
+
+ECEN463: Wireless Communication
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+4:30 PM - 6:20 PM
+
+Wednesday
+
+Nile University, UB2, Floor FUB2, Room F44
+Yasmeen Waleed Etman
+0.00
+Credits
+12
+
+Seats Left
+
+ECEN469: Selected Topics in Communications
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+11:30 AM - 1:20 PM
+
+Tuesday
+
+Nile University, UB1, Floor GUB1, Room 132
+Mohamed Saeed Darweesh
+3.00
+Credits
+49
+Seats Left
+
+ECEN469: Selected Topics in Communications
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+2:30 PM - 4:29 PM
+
+Wednesday
+
+Nile University, UB2, Floor FUB2, Room F37
+Kareem Mohamed Moussa
+0.00
+Credits
+19
+Seats Left
+
+ECEN470: Intro.to Optical Communication Systems
+Section: 01 | Session: Session 01 | Subtype: Lecture
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+1:30 PM - 3:29 PM
+
+Tuesday
+
+Nile University, UB2, Floor FUB2, Room F38
+Ahmed Mohamed Abdelwahab Mahmoud
+3.00
+Credits
+49
+Seats Left
+
+ECEN470: Intro.to Optical Communication Systems
+Section: 01A | Session: Session 01 | Subtype: Tutorial
+Type: Course | Duration: 10/2/2022 - 1/17/2023
+8:30 AM - 10:29 AM
+
+Tuesday
+
+Nile University, UB2, Floor FUB2, Room F44
+Yasmeen Waleed Etman
+0.00
+Credits
+19
+Seats Left
