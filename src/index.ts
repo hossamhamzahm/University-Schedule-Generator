@@ -1,4 +1,4 @@
-import express, { Router } from "express";
+import express from "express";
 import path from "path";
 import cors from "cors";
 import ExpressError from "./helper/ExpressError";
@@ -6,7 +6,8 @@ import ExpressError from "./helper/ExpressError";
 
 import CourseRouter from "./router/course";
 import SectionRouter from "./router/section";
-import InstructorRouter from './router/instructor'
+import InstructorRouter from "./router/instructor";
+import StudentRouter from "./router/student";
 
 
 import dotenv from "dotenv";
@@ -29,6 +30,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use("/courses", CourseRouter);
 app.use("/sections", SectionRouter);
 app.use("/instructors", InstructorRouter);
+app.use("/", StudentRouter);
 
 
 
@@ -41,9 +43,14 @@ app.get("*", (req: express.Request, res: express.Response, next: express.NextFun
 
 // Express Error handler
 app.use((err: ExpressError, req: express.Request, res: express.Response, next: express.NextFunction) => {
-    const {msg = "Internal Server Error", status = 500} = err;
-	console.error(err.stack);
-	res.status(status).send(msg);
+    const {msg = "Internal Server Error", status = 500} = err; 
+    
+    // console.log("Error", err.msg) 
+	// console.error(err.stack);
+	res.status(status).send({error: {
+        msg,
+        status
+    }});
 });
 
 

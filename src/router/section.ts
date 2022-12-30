@@ -2,8 +2,7 @@ import express from "express";
 import sectionHandler from "../handler/section";
 import wrapAsync from "../helper/wrapAsync";
 const router: express.Router = express.Router();
-
-
+import studentHandler from "../handler/student";
 
 
 /**
@@ -13,6 +12,8 @@ const router: express.Router = express.Router();
  *      section:
  *        type: object
  *        properties:
+ *          course_code:
+ *            type: string
  *          section_name: 
  *            type: string
  *          section_type: 
@@ -138,6 +139,8 @@ router.get("/:course_code", wrapAsync(sectionHandler.showCourseSections));
  *          - Sections
  *      summary: this endpoint is used to create new sections
  *      description: this endpoint is used to create new sections
+ *      security:
+ *          - BearerAuth: []
  *      requestBody:
  *          required: true
  *          content:
@@ -153,7 +156,7 @@ router.get("/:course_code", wrapAsync(sectionHandler.showCourseSections));
  *      
  */
 // [POST] /sections
-router.post("/", wrapAsync(sectionHandler.create));
+router.post("/", wrapAsync(studentHandler.isAuthenticated), wrapAsync(sectionHandler.create));
 
 
 /**
@@ -164,6 +167,8 @@ router.post("/", wrapAsync(sectionHandler.create));
  *          - Sections
  *      summary: this endpoint is used to edit sections
  *      description: this endpoint is used to edit sections
+ *      security:
+ *          - BearerAuth: []
  *      parameters:
  *          - in: path
  *            name: course_code
@@ -197,7 +202,11 @@ router.post("/", wrapAsync(sectionHandler.create));
  *                              $ref: '#components/schemas/section'
  */
 // [PATCH] /sections/:course_code/:section_name/:section_type
-router.patch("/:course_code/:section_name/:section_type", wrapAsync(sectionHandler.update));
+router.patch(
+	"/:course_code/:section_name/:section_type",
+	wrapAsync(studentHandler.isAuthenticated),
+	wrapAsync(sectionHandler.update)
+);
 
 
 
@@ -210,6 +219,8 @@ router.patch("/:course_code/:section_name/:section_type", wrapAsync(sectionHandl
  *          - Sections
  *      summary: this endpoint is used to delete sections
  *      description: this endpoint is used to delete sections
+ *      security:
+ *          - BearerAuth: []
  *      parameters:
  *          - in: path
  *            name: course_code
@@ -228,7 +239,11 @@ router.patch("/:course_code/:section_name/:section_type", wrapAsync(sectionHandl
  *              description: OK, section deleted successfully
  */
 // [DELETE] /sections/:course_code/:section_name/:section_type
-router.delete("/:course_code/:section_name/:section_type", wrapAsync(sectionHandler.remove));
+router.delete(
+	"/:course_code/:section_name/:section_type",
+	wrapAsync(studentHandler.isAuthenticated),
+	wrapAsync(sectionHandler.remove)
+);
 
 
 export default router;

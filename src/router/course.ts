@@ -1,6 +1,7 @@
 import express from 'express'
 import CourseHandler from '../handler/course';
 import wrapAsync from '../helper/wrapAsync';
+import studentHandler from '../handler/student'
 const router: express.Router = express.Router();
 
 
@@ -93,6 +94,8 @@ router.get("/:course_code", wrapAsync(CourseHandler.show));
  *          - Courses
  *      summary: this endpoint is used to create new courses
  *      description: this endpoint is used to create new courses
+ *      security:
+ *          - BearerAuth: []
  *      requestBody:
  *          required: true
  *          content:
@@ -108,7 +111,7 @@ router.get("/:course_code", wrapAsync(CourseHandler.show));
  *      
  */
 // [POST] /courses
-router.post("/", wrapAsync(CourseHandler.create));
+router.post("/", wrapAsync(studentHandler.isAuthenticated), wrapAsync(CourseHandler.create));
 
 
 /**
@@ -119,6 +122,8 @@ router.post("/", wrapAsync(CourseHandler.create));
  *          - Courses
  *      summary: this endpoint is used to update courses
  *      description: this endpoint is used to update courses
+ *      security:
+ *          - BearerAuth: []
  *      parameters:
  *          - in: path
  *            name: course_code
@@ -138,7 +143,7 @@ router.post("/", wrapAsync(CourseHandler.create));
  *      
  */
 // [PATCH] /courses/course_code
-router.patch("/:course_code", wrapAsync(CourseHandler.update));
+router.patch("/:course_code", wrapAsync(studentHandler.isAuthenticated), wrapAsync(CourseHandler.update));
 
 
 /**
@@ -149,6 +154,8 @@ router.patch("/:course_code", wrapAsync(CourseHandler.update));
  *          - Courses
  *      summary: this endpoint is used to delete courses
  *      description: this endpoint is used to delete courses
+ *      security:
+ *          - BearerAuth: []
  *      parameters:
  *          - in: path
  *            name: course_code
@@ -159,7 +166,7 @@ router.patch("/:course_code", wrapAsync(CourseHandler.update));
  *      
  */
 // [DELETE] /courses/:course_code
-router.delete("/:course_code", wrapAsync(CourseHandler.remove));
+router.delete("/:course_code", wrapAsync(studentHandler.isAuthenticated), wrapAsync(CourseHandler.remove));
 
 
 export default router;

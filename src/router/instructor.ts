@@ -1,6 +1,7 @@
 import express from "express";
 import InstructorHandler from "../handler/instructor";
 import wrapAsync from "../helper/wrapAsync";
+import studentHandler from "../handler/student";
 const router: express.Router = express.Router();
 
 /**
@@ -87,6 +88,8 @@ router.get("/:instructor_username", wrapAsync(InstructorHandler.show));
  *          - Instructors
  *      summary: this endpoint is used to create new instructors
  *      description: this endpoint is used to create new instructors
+ *      security:
+ *          - BearerAuth: []
  *      requestBody:
  *          required: true
  *          content:
@@ -102,7 +105,7 @@ router.get("/:instructor_username", wrapAsync(InstructorHandler.show));
  *
  */
 // [POST] /instructors
-router.post("/", wrapAsync(InstructorHandler.create));
+router.post("/", wrapAsync(studentHandler.isAuthenticated), wrapAsync(InstructorHandler.create));
 
 
 /**
@@ -113,6 +116,8 @@ router.post("/", wrapAsync(InstructorHandler.create));
  *          - Instructors
  *      summary: this endpoint is used to create new instructors
  *      description: this endpoint is used to create new instructors
+ *      security:
+ *          - BearerAuth: []
  *      parameters:
  *          - in: path
  *            name: instructor_username
@@ -132,7 +137,7 @@ router.post("/", wrapAsync(InstructorHandler.create));
  *              description: OK, instructor updated successfully
  */
 // [PATCH] /instructors/:instructor_username
-router.patch("/:instructor_username", wrapAsync(InstructorHandler.update));
+router.patch("/:instructor_username", wrapAsync(studentHandler.isAuthenticated), wrapAsync(InstructorHandler.update));
 
 /**
  * @swagger
@@ -142,6 +147,8 @@ router.patch("/:instructor_username", wrapAsync(InstructorHandler.update));
  *          - Instructors
  *      summary: this endpoint is used to delete instructors
  *      description: this endpoint is used to delete instructors
+ *      security:
+ *          - BearerAuth: []
  *      parameters:
  *          - in: path
  *            name: instructor_username
@@ -153,6 +160,6 @@ router.patch("/:instructor_username", wrapAsync(InstructorHandler.update));
  *
  */
 // [DELETE] /instructors/:instructor_username
-router.delete("/:instructor_username", wrapAsync(InstructorHandler.remove));
+router.delete("/:instructor_username", wrapAsync(studentHandler.isAuthenticated), wrapAsync(InstructorHandler.remove));
 
 export default router;
