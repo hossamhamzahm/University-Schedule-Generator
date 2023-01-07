@@ -2,6 +2,7 @@ import Pool from "./database";
 
 
 interface Section {
+	section_id?: string;
 	course_code: string;
 	course_name?: string;
 	section_name: string;
@@ -48,6 +49,22 @@ class SectionStore {
 		});
 	}
 
+	async showAllCourseSections(course_code: string, section_type: string): Promise<any> {
+		return new Promise((resolve, reject) => {
+			const params = [course_code, section_type];
+
+			const query = `
+            SELECT * FROM section 
+            WHERE course_code = ? AND 
+            section_type = ?;`;
+
+			Pool.query(query, params, (err, results, fields) => {
+				if (err) reject(err);
+				return resolve(results); // results contains rows returned by server
+			});
+		});
+	}
+
 	async showCourseSections(course_code: string): Promise<any> {
 		return new Promise((resolve, reject) => {
 			const query = `
@@ -77,8 +94,9 @@ class SectionStore {
 			];
 
 			const query = `
-            INSERT INTO section VALUES 
-            (?, ?, ?, ?, ?, ?, ?);
+            INSERT INTO section 
+			(course_code, section_name, section_type, section_day, section_from, section_to, instructor_username)
+			VALUES (?, ?, ?, ?, ?, ?, ?);
             SELECT * FROM section 
             WHERE course_code = ? and 
             section_name = ? and section_type = ?`;

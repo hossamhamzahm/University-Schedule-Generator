@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS schedule(
     
     sunday_id INTEGER,
     monday_id INTEGER,
-    tuseday_id INTEGER,
+    tuesday_id INTEGER,
     wednesday_id INTEGER,
     thursday_id INTEGER,
     
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS schedule(
     FOREIGN KEY(user_username) REFERENCES user(user_username),
     FOREIGN KEY(sunday_id) REFERENCES day(day_id) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY(monday_id) REFERENCES day(day_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY(tuseday_id) REFERENCES day(day_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY(tuesday_id) REFERENCES day(day_id) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY(wednesday_id) REFERENCES day(day_id) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY(thursday_id) REFERENCES day(day_id) ON DELETE CASCADE ON UPDATE CASCADE
 );

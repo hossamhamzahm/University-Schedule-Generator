@@ -5,10 +5,10 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"watch": "ENV=dev tsc-watch --esModuleInterop src/index.ts --outDir ./dist --onSuccess \"node ./dist/index.js\"",
+		"watch": "tsc-watch --esModuleInterop src/index.ts --outDir ./dist --onSuccess \"node ./dist/index.js\"",
 		"build": "tsc",
-		"start": "ENV=dev node dist/index.js",
-		"migrate": "db-migrate --env dev reset && db-migrate --env dev up && ENV=dev ts-node src/seeds/index.ts"
+		"start": "node dist/index.js",
+		"migrate": "db-migrate --env dev reset && db-migrate --env dev up && ts-node src/seeds/index.ts"
 	},
 	"keywords": [],
 	"author": "Hossam Hamza",

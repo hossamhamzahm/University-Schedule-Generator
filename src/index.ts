@@ -8,6 +8,7 @@ import CourseRouter from "./router/course";
 import SectionRouter from "./router/section";
 import InstructorRouter from "./router/instructor";
 import StudentRouter from "./router/student";
+import ScheduleRouter from "./router/schedule";
 
 
 import dotenv from "dotenv";
@@ -30,6 +31,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use("/courses", CourseRouter);
 app.use("/sections", SectionRouter);
 app.use("/instructors", InstructorRouter);
+app.use("/schedules", ScheduleRouter);
 app.use("/", StudentRouter);
 
 

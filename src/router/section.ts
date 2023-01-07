@@ -12,6 +12,8 @@ import studentHandler from "../handler/student";
  *      section:
  *        type: object
  *        properties:
+ *          section_id:
+ *            type: integer
  *          course_code:
  *            type: string
  *          section_name: 
@@ -138,7 +140,10 @@ router.get("/:course_code", wrapAsync(sectionHandler.showCourseSections));
  *      tags: 
  *          - Sections
  *      summary: this endpoint is used to create new sections
- *      description: this endpoint is used to create new sections
+ *      description: |-
+ *                This endpoint is used to create new sections <br> <br>
+ *                Note: <br>
+ *                You should not include a section_id in the request, it will be generated automatically in the backend
  *      security:
  *          - BearerAuth: []
  *      requestBody:
