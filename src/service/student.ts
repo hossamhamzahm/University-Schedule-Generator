@@ -1,7 +1,8 @@
+import Config from "../config";
 import jwt from "jsonwebtoken";
 
 const sign = async(student_username: string) => {
-	const access_token_secret = process.env.ACCESS_TOKEN_SECRET as string;
+	const access_token_secret = Config.access_token_secret;
 	const signed = await jwt.sign(
 		{ student_username, iat: Math.floor(Date.now() / 1000) },
 		access_token_secret,

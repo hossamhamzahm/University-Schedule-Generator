@@ -4,6 +4,7 @@ import { Student, StudentStore } from "../model/student";
 import ExpressError from "../helper/ExpressError";
 import StudentService from '../service/student'
 import jwt from "jsonwebtoken";
+import Config from "../config";
 
 
 
@@ -20,8 +21,8 @@ declare global {
 const signup = async (req: Request, res: Response): Promise<void> => {
 	const student: Student = req.body.student;
 
-	const needs_hashing = student.student_password + (process.env.BCRYPT_PEPPER as string);
-	const salt_rounds: number = parseInt(process.env.SALT_ROUNDS as string);
+	const needs_hashing = student.student_password + (Config.bcrypt_pepper as string);
+	const salt_rounds: number = Config.salt_rounds;
 	student.hashed_password = await bcrypt.hashSync(needs_hashing, salt_rounds)
 	
 	const studentStore = new StudentStore();
@@ -38,7 +39,7 @@ const signup = async (req: Request, res: Response): Promise<void> => {
 const login = async (req: Request, res: Response): Promise<void> => {
 	const {student_username, student_password} = req.body.student;
 
-	const needs_hashing = student_password + (process.env.BCRYPT_PEPPER as string);
+	const needs_hashing = student_password + (Config.bcrypt_pepper as string);
 	const studentStore = new StudentStore();
 	const result = await studentStore.show(student_username);
 
@@ -61,7 +62,7 @@ const isAuthenticated = async (req: Request, res: Response, next: NextFunction):
 	const token = req.headers.authorization?.split(' ')[1];
 	if (!token) throw new ExpressError("Unauthorized, Please Login", 403);
 
-	const access_token_secret = process.env.ACCESS_TOKEN_SECRET as string;
+	const access_token_secret = Config.access_token_secret as string;
 
 	let jwt_payload: { student_username: string; iat: number; exp: number };
 	try{

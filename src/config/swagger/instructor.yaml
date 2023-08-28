@@ -1,0 +1,124 @@
+components:
+    schemas:
+        instructor:
+            type: object
+            properties:
+                instructor_username:
+                    type: string
+                f_name:
+                    type: string
+                m_name:
+                    type: string
+                l_name:
+                    type: string
+                instructor_faculty:
+                    type: string
+
+
+
+/instructors/{instructor_username}:
+  get:
+    tags:
+        - Instructors
+    summary: This endpoint shows a detailed instructor description
+    description: This endpoint shows a detailed instructor description
+    parameters:
+        - in: path
+          name: instructor_username
+          type: string
+          required: true
+    responses:
+        200:
+            description: valid request
+            content:
+                application/json:
+                    schema:
+                        type: array
+                        items:
+                            $ref: '#components/schemas/instructor'
+  patch:
+    tags:
+        - Instructors
+    summary: this endpoint is used to create new instructors
+    description: this endpoint is used to create new instructors
+    security:
+        - BearerAuth: []
+    parameters:
+        - in: path
+          name: instructor_username
+          type: string
+          required: true
+    requestBody:
+        required: true
+        content:
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                      instructor:
+                        $ref: '#components/schemas/instructor'
+    responses:
+        200:
+            description: OK, instructor updated successfully
+  delete:
+    tags:
+        - Instructors
+    summary: this endpoint is used to delete instructors
+    description: this endpoint is used to delete instructors
+    security:
+        - BearerAuth: []
+    parameters:
+        - in: path
+          name: instructor_username
+          type: string
+          required: true
+    responses:
+        200:
+            description: OK, instructor deleted successfully
+
+
+
+
+/instructors:
+  get:
+    tags:
+        - Instructors
+    summary: this endpoint gets all the instructors
+    description: the number of instructors returned is dependent on the limit parameter
+    parameters:
+        - in: query
+          name: pageNo
+          type: integer
+          required: true
+        - in: query
+          name: limit
+          type: integer
+          required: true
+    responses:
+        200:
+            description: valid request
+            content:
+                application/json:
+                    schema:
+                        type: array
+                        items:
+                            $ref: '#components/schemas/instructor'
+  post:
+    tags:
+        - Instructors
+    summary: this endpoint is used to create new instructors
+    description: this endpoint is used to create new instructors
+    security:
+        - BearerAuth: []
+    requestBody:
+        required: true
+        content:
+            application/json:
+                schema:
+                    type: object
+                    properties:
+                      instructor:
+                        $ref: '#components/schemas/instructor'
+    responses:
+        200:
+            description: OK, instructor created successfully

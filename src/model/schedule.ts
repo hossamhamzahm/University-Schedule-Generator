@@ -64,16 +64,17 @@ class ScheduleStore {
 	// 	});
 	// }
 
-	// async create(course: Course): Promise<any> {
-	// 	return new Promise((resolve, reject) => {
-	// 		const query = `INSERT INTO course VALUES (?, ?);`;
+	async create(schedule: Schedule): Promise<any> {
+		// return new Promise((resolve, reject) => {
+		// 	const query = `INSERT INTO course VALUES (?, ?);`;
 
-	// 		Pool.query(query, [course.course_code, course.course_name, course.course_code], (err, results, fields) => {
-	// 			if (err) reject(err);
-	// 			return resolve(results); // results contains rows returned by server
-	// 		});
-	// 	});
-	// }
+		// 	Pool.query(query, [course.course_code, course.course_name, course.course_code], (err, results, fields) => {
+		// 		if (err) reject(err);
+		// 		return resolve(results); // results contains rows returned by server
+		// 	});
+		// });
+		return
+	}
 
 	// async update(course: Course): Promise<any> {
 	// 	return new Promise((resolve, reject) => {

@@ -1,31 +1,30 @@
 import mysql from "mysql2";
-import dotenv from "dotenv";
-import path from "path";
-dotenv.config({ path: path.join(__dirname, "..", "..", ".env") });
+import Config from "../config";
 
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME, ENV } = process.env;
+
+const {db_host, db_name, db_port, db_user, db_password} = Config;
 
 
 let Pool: mysql.Pool;
 
 
-if (ENV === "dev") {
+if ( process.env.NODE_ENV === "prod") {
 	Pool = mysql.createPool({
 		multipleStatements: true,
-		host: DB_HOST,
-		password: DB_PASSWORD,
-		user: DB_USER,
-		database: DB_NAME,
-		port: DB_PORT as unknown as number,
+		host: db_host,
+		password: db_password,
+		user: db_user,
+		database: db_name,
+		port: db_port,
 	});
 } 
 else {
 	Pool = mysql.createPool({
-		host: DB_HOST,
-		password: DB_PASSWORD,
+		host: db_host,
+		password: db_password,
 		user: "test_user",
 		database: "company_test",
-		port: DB_PORT as unknown as number,
+		port: db_port,
 	});
 }
 

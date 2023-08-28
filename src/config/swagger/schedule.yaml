@@ -1,0 +1,47 @@
+components:
+  schemas:
+    schedule:
+      type: object
+      properties:
+        sunday:
+          $ref: '#components/schemas/section'
+        monday:
+          $ref: '#components/schemas/section'
+        tuesday:
+          $ref: '#components/schemas/section'
+        wednesday:
+          $ref: '#components/schemas/section'
+        thursday:
+          $ref: '#components/schemas/section'
+
+
+
+/schedules:
+  post:
+    tags:
+        - Schedules
+    summary: this endpoint generates all possible schedules of the specified list of courses
+    description: this endpoint generates all possible schedules of the specified list of courses
+    security:
+        - BearerAuth: []
+    requestBody:
+        required: true
+        content:
+            application/json:
+                schema:
+                    type: object 
+                    properties:
+                      needed_courses:
+                        type: array
+                        items:
+                          type: string
+                        example: ["courseCode", "courseCode"]
+    responses:
+        200:
+            description: valid request
+            content:
+                application/json:
+                    schema:
+                        type: array
+                        items:
+                            $ref: '#components/schemas/schedule'

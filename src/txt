@@ -1,0 +1,16 @@
+path="";
+
+for line in $(ls -R);
+do
+    if [[ ${line: -1} == ":" ]] ;
+    then
+        path=${line::-1}
+    else
+        chmod 777 "$path/$line"; 
+    fi
+done
+
+
+```
+npm remove @types/dotenv
+```

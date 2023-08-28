@@ -61,7 +61,7 @@ const getCombinedCourses = async (needed_courses: string[], courses: CombinedCou
 
 
 
-// write backtracking here
+// Backtracking Algorithm
 const generate_schedules = async (coursesList: CombinedCourse[][], idx: number, allPossibilities: SchedulePopulated[]): Promise<void> => {
 	// base case
 	if (idx >= coursesList.length) {
@@ -72,11 +72,11 @@ const generate_schedules = async (coursesList: CombinedCourse[][], idx: number, 
     for(const course of coursesList[idx]){
 		if (clash(course.combined_times)) continue;
 
-        // DO : mark the schedule
-		mark(course.combined_times, false)
+		// DO : mark course slots in the schedule
+		mark(course.combined_times, false);
 		// recurse
 		generate_schedules(coursesList, idx + 1, allPossibilities);
-		// undo: unmark the schedule
+		// undo: unmark course slots in the schedule
 		mark(course.combined_times, true);
 	}
 };

@@ -31,8 +31,20 @@ const generate = async (req: Request, res: Response): Promise<void> => {
 
 
 
+// [POST] /sections/register
+const register = async (req: Request, res: Response): Promise<void> => {
+	const schedules = await generate_tables(req.body.needed_courses);
+	
+	console.log(schedules.length)
+	let responses = [];
+	if(schedules.length > 20) responses = schedules.slice(0, 21);
+	else responses = schedules;
+
+	res.send(responses)
+};
 
 
 export default {
 	generate,
+	register,
 };
