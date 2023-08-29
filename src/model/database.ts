@@ -1,31 +1,31 @@
-import mysql from "mysql2";
-import Config from "../config";
+import config from '../config';
+import { Sequelize } from 'sequelize';
 
+let sequelize: Sequelize;
 
-const {db_host, db_name, db_port, db_user, db_password} = Config;
-
-
-let Pool: mysql.Pool;
-
-
-if ( process.env.NODE_ENV === "prod") {
-	Pool = mysql.createPool({
-		multipleStatements: true,
-		host: db_host,
-		password: db_password,
-		user: db_user,
-		database: db_name,
-		port: db_port,
-	});
-} 
-else {
-	Pool = mysql.createPool({
-		host: db_host,
-		password: db_password,
-		user: "test_user",
-		database: "company_test",
-		port: db_port,
-	});
+if (process.env.NODE_ENV !== 'prod') {
+    sequelize = new Sequelize(config.db_name_dev, config.db_user_dev, config.db_password_dev, {
+        dialect: 'mysql',
+        storage: config.db_host,
+        host: config.db_host,
+        port: config.db_port,
+        logging: false,
+        // dialectOptions: {
+        // 	// useUTC: false, //for reading from database
+        // 	dateStrings: true,
+        // 	typeCast: true,
+        // timezone: "+03:00",
+        // },
+        // timezone: "+03:00", //for writing to database
+    });
+} else {
+    sequelize = new Sequelize(config.db_name, config.db_user, config.db_password, {
+        dialect: 'mysql',
+        storage: config.db_host,
+        host: config.db_host,
+        port: config.db_port,
+        logging: true,
+    });
 }
 
-export default Pool;
+export default sequelize;

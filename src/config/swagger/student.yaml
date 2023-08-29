@@ -15,8 +15,12 @@ components:
                     type: string
                 l_name:
                     type: string
-                student_major:
+                faculty:
                     type: string
+                    enum:
+                        - Engineering
+                        - Business
+                        - Computer Science
                 student_password:
                     type: string
 
@@ -46,6 +50,13 @@ components:
     responses:
         200:
             description: OK, user authenticated successfully
+            content:
+                application/json:
+                    schema:
+                        type: object
+                        properties:
+                            AccessToken:
+                                type: string
 
 
 
@@ -65,5 +76,12 @@ components:
                       student:
                         $ref: '#components/schemas/student'
     responses:
-        200:
+        201:
             description: OK, student created successfully
+            content:
+                application/json:
+                    schema:
+                        type: object
+                        properties:
+                            AccessToken:
+                                type: string

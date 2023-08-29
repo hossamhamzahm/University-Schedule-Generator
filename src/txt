@@ -1,6 +1,6 @@
 path="";
 
-for line in $(ls -R);
+for line in $("ls -R ./.git");
 do
     if [[ ${line: -1} == ":" ]] ;
     then

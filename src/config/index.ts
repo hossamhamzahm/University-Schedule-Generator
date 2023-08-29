@@ -2,8 +2,7 @@ import path from "path";
 import dotenv from "dotenv";
 
 if(process.env.NODE_ENV != "prod")
-    dotenv.config({ path: path.join(__dirname, "..", ".env") });
-
+    dotenv.config({ path: path.join(__dirname, "..", "..", ".env") });
 
 
 export default{
