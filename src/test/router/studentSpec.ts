@@ -12,7 +12,7 @@ describe('Testing Student Endpoints', () => {
             f_name: 'Ziad',
             m_name: 'mohamed',
             l_name: 'Khaled',
-            faculty: 'Engineering',
+            student_faculty: 'EAS',
         };
         let token: string;
         let payload: string;
@@ -23,7 +23,7 @@ describe('Testing Student Endpoints', () => {
                 .send({ student })
                 .expect(201)
                 .end(function (err, res) {
-                    if (err){
+                    if (err) {
                         console.error(err);
                         console.log(res.body);
                         return done.fail();
@@ -93,7 +93,7 @@ describe('Testing Student Endpoints', () => {
                 .set({ Authorization: `Bearer ${token}` })
                 .expect(200)
                 .end(function (err, res) {
-                    if (err){
+                    if (err) {
                         console.log(res.body);
                         console.log(err)
                         return done.fail();

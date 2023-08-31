@@ -19,6 +19,8 @@ const signup = async (req: Request, res: Response, next: NextFunction): Promise<
 	const needs_hashing = student.student_password + Config.bcrypt_pepper;
 	student.hashed_password = await bcrypt.hashSync(needs_hashing, Config.salt_rounds)
 
+	if (student.can_edit) delete student['can_edit']
+
 	const transaction = await sequelize.transaction();
 	try {
 		const user = await User.create({ 
@@ -52,7 +54,7 @@ const remove = async (req: Request, res: Response, next: NextFunction): Promise<
 		throw new ExpressError("Unauthorized Request", 403);
 	}
 
-	const result = await Student.destroy({where: {student_username}});
+	const result = await User.destroy({where: {user_username: student_username}});
 
 	if (result != 1) throw new ExpressError("User not found", 404);
 	res.status(200).send({ msg: "Student removed successfully" });

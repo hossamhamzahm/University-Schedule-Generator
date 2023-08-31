@@ -15,12 +15,12 @@ components:
                     type: string
                 l_name:
                     type: string
-                faculty:
+                student_faculty:
                     type: string
                     enum:
-                        - Engineering
+                        - EAS
                         - Business
-                        - Computer Science
+                        - CS
                 student_password:
                     type: string
 

@@ -7,7 +7,7 @@ export default Joi.object({
         f_name: Joi.string().required(),
         m_name: Joi.string().required(),
         l_name: Joi.string().required(),
-        faculty: Joi.string().required(),
+        student_faculty: Joi.string().required(),
         student_password: Joi.string().required(),
     }).required(),
 }).required();
