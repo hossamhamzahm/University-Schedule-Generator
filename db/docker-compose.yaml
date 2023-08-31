@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  mysql-db:
+    image: mysql:latest
+    container_name: schedule_generator_db
+    environment:
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: "@sdfghjkL12345"
+      MYSQL_ROOT_PASSWORD: "@sdfghjkL12345"
+      MYSQL_DATABASE: schedule_generator
+    ports:
+      - "3366:3306"

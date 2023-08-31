@@ -9,11 +9,15 @@ COPY . /app
 # RUN npm install
 # RUN npm ci --only=procduction 
 RUN npm i 
-# RUN ["npm", "run", "migrate-dev"]
 
 
+RUN ["chmod", "+x", "./start.sh"]
+
+# RUN npm run build
+
+ENTRYPOINT ["./start.sh"] 
 # CMD ["npm", "run", "start"]
-CMD ["npm", "run", "watch"]
+# CMD ["npm run migrate-dev && npm run watch"]
 
 
 EXPOSE 3000/tcp
