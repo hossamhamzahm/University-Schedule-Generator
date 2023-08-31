@@ -11,13 +11,13 @@ COPY . /app
 RUN npm i 
 
 
-RUN ["chmod", "+x", "./start.sh"]
+# RUN ["chmod", "+x", "./start.sh"]
 
 # RUN npm run build
 
-ENTRYPOINT ["./start.sh"] 
+# ENTRYPOINT ["./start.sh"] 
 # CMD ["npm", "run", "start"]
-# CMD ["npm run migrate-dev && npm run watch"]
+CMD ["npm", "run", "watch"]
 
 
 EXPOSE 3000/tcp

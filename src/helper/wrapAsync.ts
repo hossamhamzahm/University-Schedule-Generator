@@ -15,7 +15,9 @@ export default function <T>(
             // checking if this is a sequelize error
             if (e instanceof Sequelize.BaseError) {
                 // e.message += e.parent.sqlMessae
-                if (e instanceof Sequelize.ConnectionError) next(new ExpressError(e.message, 500));
+                if (e instanceof Sequelize.ConnectionError){
+                    next(new ExpressError(e.message, 500));
+                }
                 if (e instanceof Sequelize.ValidationError){
                     for(let error of e.errors){
                         e.message += ", " + error.message
@@ -27,12 +29,18 @@ export default function <T>(
                     }
                     next(new ExpressError(e.message, 400));
                 }
+                else next(new ExpressError(e.message, 500));
             }
-            else if (e instanceof ExpressError) next(e);
+            else if (e instanceof ExpressError){
+                next(e);
+            }
             else if (e instanceof Error){
                 next(new ExpressError(e.message, 400));
             }
-            else next(e);
+            else{
+                next(e);
+            }
+
         }
 	};
 }

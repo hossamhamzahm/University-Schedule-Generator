@@ -5,6 +5,6 @@ CREATE TABLE IF NOT EXISTS instructor(
     
     PRIMARY KEY(instructor_username),
     FOREIGN KEY (instructor_username) REFERENCES user(user_username),
-    CHECK (instructor_faculty IN ('EAS', 'Business', 'Computer Science'))
+    CHECK (instructor_faculty IN ('EAS', 'Business', 'CS'))
 );
 
