@@ -8,7 +8,7 @@ import Config from "./config";
 // import CourseRouter from "./router/course";
 // import SectionRouter from "./router/section";
 // import InstructorRouter from "./router/instructor";
-// import StudentRouter from "./router/student";
+import StudentRouter from "./router/student";
 // import ScheduleRouter from "./router/schedule";
 
 
@@ -32,7 +32,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // app.use("/sections", SectionRouter);
 // app.use("/instructors", InstructorRouter);
 // app.use("/schedules", ScheduleRouter);
-// app.use("/", StudentRouter);
+app.use("/", StudentRouter);
 
 
 
@@ -59,3 +59,4 @@ app.use((err: ExpressError, req: express.Request, res: express.Response, next: e
 
 
 app.listen(Config.port, () => console.log("Listening on port", Config.port));
+export default app;

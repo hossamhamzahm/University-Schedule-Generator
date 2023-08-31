@@ -1,4 +1,9 @@
 import express from "express";
+import Sequelize from "sequelize";
+import ExpressError from "./ExpressError";
+import User from "../model/user";
+
+
 
 export default function <T>(
 	fn: (req: express.Request, res: express.Response, next: express.NextFunction) => Promise<T>
@@ -7,50 +12,27 @@ export default function <T>(
 		try {
 			return await fn(req, res, next);
 		} catch (e: unknown) {
-            // @ts-ignore
-            // console.log(e.message);
-
             // checking if this is a sequelize error
-            // @ts-ignore
-            if (e.errors && e.errors[0]) {
-                e = {
-                    // @ts-ignore
-                    message: e.errors[0].message,
-                    // @ts-ignore
-                    sqlMessage: (e.parent ? e.parent.sqlMessage : null),
-                    status: 403,
-                    // @ts-ignore
-                    stack: e.stack,
-                };
-            } else {
-                e = {
-                    // @ts-ignore
-                    message: e.message,
-                    // @ts-ignore
-                    stack: e.stack,
-                    // @ts-ignore
-                    status: e.status,
-                };
+            if (e instanceof Sequelize.BaseError) {
+                // e.message += e.parent.sqlMessae
+                if (e instanceof Sequelize.ConnectionError) next(new ExpressError(e.message, 500));
+                if (e instanceof Sequelize.ValidationError){
+                    for(let error of e.errors){
+                        e.message += ", " + error.message
+                        
+                        if (e.name === "SequelizeUniqueConstraintError"){
+                            if (error.instance instanceof User) 
+                                e.message += ", This username is already taken."
+                        }
+                    }
+                    next(new ExpressError(e.message, 400));
+                }
             }
-
-            // until this line the stack is present
-
-            // @ts-ignore
-            e.user_db_id = req.user?.user_db_id || null;
-
-            // creation of new ErrorLog row to generate a new id
-            // @ts-ignore
-            const error_id = await logger.transports[1].init();
-
-            // @ts-ignore
-            e.error_id = error_id;
-
-            // @ts-ignore
-            e.label = `Error ID: ${error_id}`;
-
-            // this line updates the newly created ErrorLog with the error data
-            // then logs it to different transports
-            next(e);
+            else if (e instanceof ExpressError) next(e);
+            else if (e instanceof Error){
+                next(new ExpressError(e.message, 400));
+            }
+            else next(e);
         }
 	};
 }

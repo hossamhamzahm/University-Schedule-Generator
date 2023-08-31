@@ -4,7 +4,7 @@ import { Sequelize } from 'sequelize';
 let sequelize: Sequelize;
 
 if (process.env.NODE_ENV !== 'prod') {
-    sequelize = new Sequelize(config.db_name_dev, config.db_user_dev, config.db_password_dev, {
+    sequelize = new Sequelize(config.db_name/* _dev */, config.db_user/* _dev */, config.db_password/* _dev */, {
         dialect: 'mysql',
         storage: config.db_host,
         host: config.db_host,
@@ -24,7 +24,7 @@ if (process.env.NODE_ENV !== 'prod') {
         storage: config.db_host,
         host: config.db_host,
         port: config.db_port,
-        logging: true,
+        logging: false,
     });
 }
 

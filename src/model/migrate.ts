@@ -2,9 +2,10 @@ import User from "./user";
 import Student from "./student";
 // import LoggedJwt from "./loggedJwt";
 // import ErrorLog from "./error_log";
-import config from "../config";
+// import config from "../config";
 // import bcrypt from "bcrypt";
 import sequelize from "./database";
+import LoggedJwt from "./logged_jwt";
 // import error_log_scheduler from "../service/jobs/error_log_scheduler";
 
 
@@ -18,6 +19,7 @@ const migrate = async (force = false) => {
 
 	await User.sync({ force });
 	await Student.sync({ force });
+	await LoggedJwt.sync({ force });
 
 
 	if(force){

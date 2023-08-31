@@ -60,7 +60,56 @@ components:
 
 
 
-/signup:
+
+
+/logout:
+  post:
+    tags:
+        - Student
+    summary: this endpoint is used to logout users in
+    description: this endpoint is used to logout users in
+    security:
+        - BearerAuth: []
+    responses:
+        200:
+            description: OK, Logged out successfully
+            content:
+                application/json:
+                    schema:
+                        type: object
+                        properties:
+                            msg:
+                                type: string
+
+
+
+
+/students/{student_username}:
+  delete:
+    tags:
+        - Student
+    summary: This endpoint is used to delete student account
+    description: This endpoint is used to delete student account
+    security:
+        - BearerAuth: []
+    parameters:
+        - in: path
+          name: student_username
+          type: string
+          required: true
+    responses:
+        200:
+            description: OK, Student removed successfully
+            content:
+                application/json:
+                    schema:
+                        type: object
+                        properties:
+                            msg:
+                                type: string
+
+
+/students:
   post:
     tags:
         - Student

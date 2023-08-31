@@ -22,9 +22,12 @@ const Student = sequelize.define(
 			type: DataTypes.ENUM,
 			values: ['Engineering', 'Business', 'Computer Science'],
 			validate: {
-				isIn: [['Engineering', 'Business', 'Computer Science']],
-				msg: "Faculty must be one of the following: ['Engineering', 'Business', 'Computer Science']"
-			}
+				
+				isIn: {
+					args: [['Engineering', 'Business', 'Computer Science']],
+					msg: "Faculty must be one of the following: ['Engineering', 'Business', 'Computer Science']",
+				}
+			}	
 		}
 	},
 	

@@ -9,7 +9,7 @@ COPY . /app
 # RUN npm install
 # RUN npm ci --only=procduction 
 RUN npm i 
-RUN ["npm", "run", "migrate-dev"]
+# RUN ["npm", "run", "migrate-dev"]
 
 
 # CMD ["npm", "run", "start"]
