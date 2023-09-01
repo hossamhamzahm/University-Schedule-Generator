@@ -1,105 +1,96 @@
-import Pool from "./database";
-import { DayPopulated } from "./day";
+import { DataTypes } from "sequelize";
+import sequelize from "./database";
+import Day from "./day";
+import Student from "./student";
 
 
-interface Schedule {
-	user_username: string;
-	is_stared: boolean;
-	is_archived: boolean;
-	is_registered: boolean;
-
-	schedule_id: number;
-
-	sunday_id: number;
-	monday_id: number;
-	tuesday_id: number;
-	wednesday_id: number;
-	thursday_id: number;
-}
-
-
-
-interface SchedulePopulated {
-	user_username?: string;
-	is_stared?: boolean;
-	is_archived?: boolean;
-	is_registered?: boolean;
-
-	schedule_id?: number;
-
-	sunday: DayPopulated;
-	monday: DayPopulated;
-	tuesday: DayPopulated;
-	wednesday: DayPopulated;
-	thursday: DayPopulated;
-}
-
-
-class ScheduleStore {
-	async index(pageNo: number = 1, limit: number = 20, user: string): Promise<any> {
-		return new Promise((resolve, reject) => {
-			const query = `
-                SELECT * FROM schedule
-				WHERE user_username = ?
-                LIMIT ? OFFSET ?;`;
-
-			const offset = (pageNo - 1) * limit;
-			Pool.query(query, [user, limit, offset], (err, results, fields) => {
-				if (err) reject(err);
-				return resolve(results); // results contains rows returned by server
-			});
-		});
+const Schedule = sequelize.define(
+	'Schedule',
+	{
+		schedule_id: {
+			type: DataTypes.INTEGER,
+			primaryKey: true,
+			autoIncrement: true,
+		},
+		student_username: {
+			type: DataTypes.STRING(24),
+			allowNull: true,
+			references: {
+				model: Student,
+				key: 'student_username'
+			}
+		},
+		is_stared: {
+			type: DataTypes.BOOLEAN,
+			allowNull: true,
+		},
+		is_registered: {
+			type: DataTypes.BOOLEAN,
+			allowNull: true,
+		},
+		sunday_id: {
+			type: DataTypes.INTEGER,
+			allowNull: true,
+			references: {
+				model: Day,
+				key: 'day_id'
+			}
+		},
+		monday_id: {
+			type: DataTypes.INTEGER,
+			allowNull: true,
+			references: {
+				model: Day,
+				key: 'day_id'
+			}
+		},
+		tuesday_id: {
+			type: DataTypes.INTEGER,
+			allowNull: true,
+			references: {
+				model: Day,
+				key: 'day_id'
+			}
+		},
+		wednesday_id: {
+			type: DataTypes.INTEGER,
+			allowNull: true,
+			references: {
+				model: Day,
+				key: 'day_id'
+			}
+		},
+		thursday_id: {
+			type: DataTypes.INTEGER,
+			allowNull: true,
+			references: {
+				model: Day,
+				key: 'day_id'
+			}
+		}
+	},
+	{
+		tableName: 'schedule',
+		underscored: true,
+		timestamps: false,
 	}
+)
 
-	// async show(course_code: string): Promise<any> {
-	// 	return new Promise((resolve, reject) => {
-	// 		const query = `
-    //             SELECT * FROM course
-    //             WHERE course.course_code = ?;`;
 
-	// 		Pool.query(query, [course_code], (err, results, fields) => {
-	// 			if (err) reject(err);
-	// 			return resolve(results); // results contains rows returned by server
-	// 		});
-	// 	});
-	// }
-
-	async create(schedule: Schedule): Promise<any> {
-		// return new Promise((resolve, reject) => {
-		// 	const query = `INSERT INTO course VALUES (?, ?);`;
-
-		// 	Pool.query(query, [course.course_code, course.course_name, course.course_code], (err, results, fields) => {
-		// 		if (err) reject(err);
-		// 		return resolve(results); // results contains rows returned by server
-		// 	});
-		// });
-		return
-	}
-
-	// async update(course: Course): Promise<any> {
-	// 	return new Promise((resolve, reject) => {
-	// 		const query = `
-    //         UPDATE course SET course_name = ? WHERE course_code = ?;
-    //         SELECT * FROM course WHERE course_code = ?;`;
-
-	// 		Pool.query(query, [course.course_name, course.course_code, course.course_code], (err, results, fields) => {
-	// 			if (err) reject(err);
-	// 			return resolve(results);
-	// 		});
-	// 	});
-	// }
-
-	// async remove(course_code: string): Promise<any> {
-	// 	return new Promise((resolve, reject) => {
-	// 		const query = `
-    //         DELETE FROM course WHERE course_code = ?;`;
-
-	// 		Pool.query(query, [course_code], (err, results, fields) => {
-	// 			if (err) reject(err);
-	// 			return resolve(results);
-	// 		});
-	// 	});
-	// }
+let days = ['sunday_id','monday_id', 'tuesday_id', 'wednesday_id', 'thursday_id'];
+for (let day of days){
+	Schedule.belongsTo(Day, {
+		foreignKey: day,
+		targetKey: 'day_id',
+		onDelete: 'CASCADE',
+	})
 }
 
-export { Schedule, SchedulePopulated, ScheduleStore };
+
+Schedule.belongsTo(Student, {
+	foreignKey: 'student_username',
+	targetKey: 'student_username',
+	onDelete: 'CASCADE',
+})
+
+export default Schedule;

@@ -9,6 +9,8 @@ import LoggedJwt from "./logged_jwt";
 import Instructor from "./instructor";
 import Course from "./course";
 import Section from "./section";
+import Day from "./day";
+import Schedule from "./schedule";
 // import error_log_scheduler from "../service/jobs/error_log_scheduler";
 
 
@@ -26,6 +28,8 @@ const migrate = async (force = false) => {
 	await Instructor.sync({ force });
 	await Course.sync({ force });
 	await Section.sync({ force });
+	await Day.sync({ force });
+	await Schedule.sync({ force });
 
 
 	if(force){
