@@ -62,6 +62,15 @@ components:
     responses:
         200:
             description: OK, instructor updated successfully
+            content:
+                application/json:
+                    schema:
+                        type: object
+                        properties:
+                            msg:
+                                type: string
+
+
   delete:
     tags:
         - Instructors

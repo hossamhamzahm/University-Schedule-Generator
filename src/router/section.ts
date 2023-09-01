@@ -2,7 +2,7 @@ import express from "express";
 import sectionHandler from "../handler/section";
 import wrapAsync from "../helper/wrapAsync";
 const router: express.Router = express.Router();
-import studentHandler from "../handler/student";
+import { isAuthenticated } from "../service/student";
 
 
 
@@ -14,19 +14,19 @@ router.get("/", wrapAsync(sectionHandler.index));
 router.get("/:course_code/:section_name/:section_type", wrapAsync(sectionHandler.show));
 
 // [POST] /sections
-router.post("/", wrapAsync(studentHandler.isAuthenticated), wrapAsync(sectionHandler.create));
+router.post("/", wrapAsync(isAuthenticated), wrapAsync(sectionHandler.create));
 
 // [PATCH] /sections/:course_code/:section_name/:section_type
 router.patch(
 	"/:course_code/:section_name/:section_type",
-	wrapAsync(studentHandler.isAuthenticated),
+	wrapAsync(isAuthenticated),
 	wrapAsync(sectionHandler.update)
 );
 
 // [DELETE] /sections/:course_code/:section_name/:section_type
 router.delete(
 	"/:course_code/:section_name/:section_type",
-	wrapAsync(studentHandler.isAuthenticated),
+	wrapAsync(isAuthenticated),
 	wrapAsync(sectionHandler.remove)
 );
 

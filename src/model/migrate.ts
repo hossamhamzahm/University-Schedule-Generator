@@ -7,6 +7,8 @@ import Student from "./student";
 import sequelize from "./database";
 import LoggedJwt from "./logged_jwt";
 import Instructor from "./instructor";
+import Course from "./course";
+import Section from "./section";
 // import error_log_scheduler from "../service/jobs/error_log_scheduler";
 
 
@@ -22,6 +24,8 @@ const migrate = async (force = false) => {
 	await Student.sync({ force });
 	await LoggedJwt.sync({ force });
 	await Instructor.sync({ force });
+	await Course.sync({ force });
+	await Section.sync({ force });
 
 
 	if(force){

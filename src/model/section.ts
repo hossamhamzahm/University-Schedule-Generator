@@ -1,161 +1,92 @@
-import Pool from "./database";
+import { DataTypes } from "sequelize";
+import sequelize from "./database";
+import Course from "./course";
+import Instructor from "./instructor";
 
 
-interface Section {
-	section_id?: string;
-	course_code: string;
-	course_name?: string;
-	section_name: string;
-	section_type: string;
-	section_day: string;
-	section_from: string;
-	section_to: string;
-	instructor_name?: string;
-	instructor_username?: string;
-}
+const Section = sequelize.define(
+	'Section',
+	{
+		section_id: {
+			type: DataTypes.INTEGER,
+			primaryKey: true,
+			autoIncrement: true,
+		},
+		course_code: {
+			type: DataTypes.STRING(35),
+			primaryKey: true,
+			references: {
+				model: Course,
+				key: 'course_code',
+			},
+		},
+		instructor_username: {
+			type: DataTypes.STRING(30),
+			references: {
+				model: Instructor,
+				key: 'instructor_username',
+			},
+		},
+		section_name: {
+			type: DataTypes.STRING(4),
+			allowNull: false
+		},
+		section_type: {
+			type: DataTypes.ENUM,
+			values: ['Lecture', 'Lab', 'Tutorial'],
+			validate: {
 
+				isIn: {
+					args: [['Lecture', 'Lab', 'Tutorial']],
+					msg: "Section type must be one of the following: ['Lecture', 'Lab', 'Tutorial']",
+				}
+			}
+		},
+		section_day: {
+			type: DataTypes.ENUM,
+			values: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+			validate: {
+				isIn: {
+					args: [['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday']],
+					msg: "Section day must be one of the following: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday']",
+				}
+			}
+		},
+		section_to: {
+			type: DataTypes.DATE,
+			allowNull: false
+		},
+		section_from: {
+			type: DataTypes.DATE,
+			allowNull: false
+		}
+	},
 
-class SectionStore {
-	async index(pageNo: number = 1, limit: number = 20): Promise<any> {
-		return new Promise((resolve, reject) => {
-			const query = `
-			SELECT * FROM section
-			LEFT JOIN course
-			ON course.course_code = section.course_code
-			LIMIT ? OFFSET ?;`;
-
-			const offset = (pageNo - 1) * limit;
-
-			Pool.query(query, [limit, offset], (err, results, fields) => {
-				if (err) reject(err);
-				return resolve(results); // results contains rows returned by server
-			});
-		});
+	{
+		tableName: 'section',
+		underscored: true,
+		indexes: [
+			{
+				using: 'Btree',
+				unique: true,
+				fields: ['course_code', 'section_name', 'section_type']
+			}
+		]
 	}
+);
 
-	async show(course_code: string, section_name: string, section_type: string): Promise<any> {
-		return new Promise((resolve, reject) => {
-			const params = [course_code, section_name, section_type];
 
-			const query = `
-            SELECT * FROM section 
-            WHERE course_code = ? AND 
-            section_name = ? AND section_type = ?;`;
+Section.belongsTo(Course, {
+	foreignKey: "course_code",
+	targetKey: "course_code",
+	onDelete: "CASCADE",
+});
 
-			Pool.query(query, params, (err, results, fields) => {
-				if (err) reject(err);
-				return resolve(results); // results contains rows returned by server
-			});
-		});
-	}
+Section.belongsTo(Instructor, {
+	foreignKey: "instructor_username",
+	targetKey: "instructor_username",
+	onDelete: "CASCADE",
+});
 
-	async showAllCourseSections(course_code: string, section_type: string): Promise<any> {
-		return new Promise((resolve, reject) => {
-			const params = [course_code, section_type];
 
-			const query = `
-            SELECT * FROM section 
-            WHERE course_code = ? AND 
-            section_type = ?;`;
-
-			Pool.query(query, params, (err, results, fields) => {
-				if (err) reject(err);
-				return resolve(results); // results contains rows returned by server
-			});
-		});
-	}
-
-	async showCourseSections(course_code: string): Promise<any> {
-		return new Promise((resolve, reject) => {
-			const query = `
-            SELECT * FROM section 
-            WHERE course_code = ?;`;
-
-			Pool.query(query, [course_code], (err, results, fields) => {
-				if (err) reject(err);
-				return resolve(results); // results contains rows returned by server
-			});
-		});
-	}
-
-	async create(section: Section): Promise<any> {
-		return new Promise((resolve, reject) => {
-			const params = [
-				section.course_code,
-				section.section_name,
-				section.section_type,
-				section.section_day,
-				section.section_from,
-				section.section_to,
-				section.instructor_username,
-				section.course_code,
-				section.section_name,
-				section.section_type,
-			];
-
-			const query = `
-            INSERT INTO section 
-			(course_code, section_name, section_type, section_day, section_from, section_to, instructor_username)
-			VALUES (?, ?, ?, ?, ?, ?, ?);
-            SELECT * FROM section 
-            WHERE course_code = ? and 
-            section_name = ? and section_type = ?`;
-
-			Pool.query(query, params, (err, results, fields) => {
-				if (err) reject(err);
-				return resolve(results); // results contains rows returned by server
-			});
-		});
-	}
-
-	async update(course_code: string, section_name: string, section_type: string, section: Section): Promise<any> {
-		return new Promise((resolve, reject) => {
-			const params = [
-				section.section_day,
-				section.section_from,
-				section.section_to,
-				section.instructor_username,
-				course_code,
-				section_name,
-				section_type,
-				course_code,
-				section_name,
-				section_type,
-			];
-
-			const query = `
-            UPDATE section SET
-            section_day = ?, section_from = ?, 
-            section_to = ?, instructor_username = ?
-            WHERE course_code = ? AND 
-            section_name = ? AND section_type = ?;
-            
-            SELECT * FROM section
-            WHERE course_code = ? AND 
-            section_name = ? AND section_type = ?;`;
-
-			Pool.query(query, params, (err, results, fields) => {
-				if (err) reject(err);
-				return resolve(results); // results contains rows returned by server
-			});
-		});
-	}
-
-	async delete(course_code: string, section_name: string, section_type: string): Promise<any> {
-		return new Promise((resolve, reject) => {
-			const params = [course_code, section_name, section_type];
-
-			const query = `
-            DELETE FROM section 
-            WHERE course_code = ? AND 
-            section_name = ? AND section_type = ?;`;
-
-			Pool.query(query, params, (err, results, fields) => {
-				if (err) reject(err);
-				return resolve(results); // results contains rows returned by server
-			});
-		});
-	}
-}
-
-export { Section, SectionStore };
+export default Section

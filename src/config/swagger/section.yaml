@@ -54,9 +54,8 @@ components:
             content:
                 application/json:
                     schema:
-                        type: array
-                        items:
-                            $ref: '#components/schemas/section'
+                        section:
+                          $ref: '#components/schemas/section'
   patch:
     tags: 
         - Sections
@@ -88,13 +87,16 @@ components:
                         $ref: '#components/schemas/section'
     responses:
         200: 
-            description: valid request
+            description: Ok, Section updated successfully
             content:
                 application/json:
                     schema:
-                        type: array
-                        items:
-                            $ref: '#components/schemas/section'
+                        type: object
+                        properties:
+                            msg:
+                                type: string
+
+
   delete:
     tags: 
         - Sections
@@ -118,6 +120,13 @@ components:
     responses:
         200: 
             description: OK, section deleted successfully
+            content:
+                application/json:
+                    schema:
+                        type: object
+                        properties:
+                            msg:
+                                type: string
 
 
 
@@ -191,4 +200,11 @@ components:
                         $ref: '#components/schemas/section'
     responses:
         200:
-            description: OK, course created successfully
+            description: OK, Section created successfully
+            content:
+                application/json:
+                    schema:
+                        type: object
+                        properties:
+                            msg:
+                                type: string

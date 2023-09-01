@@ -1,7 +1,7 @@
 import express from 'express'
 import CourseHandler from '../handler/course';
 import wrapAsync from '../helper/wrapAsync';
-import studentHandler from '../handler/student'
+import { isAuthenticated } from '../service/student'
 const router: express.Router = express.Router();
 
 
@@ -14,13 +14,13 @@ router.get("/", wrapAsync(CourseHandler.index));
 router.get("/:course_code", wrapAsync(CourseHandler.show));
 
 // [POST] /courses
-router.post("/", wrapAsync(studentHandler.isAuthenticated), wrapAsync(CourseHandler.create));
+router.post("/", wrapAsync(isAuthenticated), wrapAsync(CourseHandler.create));
 
 // [PATCH] /courses/course_code
-router.patch("/:course_code", wrapAsync(studentHandler.isAuthenticated), wrapAsync(CourseHandler.update));
+router.patch("/:course_code", wrapAsync(isAuthenticated), wrapAsync(CourseHandler.update));
 
 // [DELETE] /courses/:course_code
-router.delete("/:course_code", wrapAsync(studentHandler.isAuthenticated), wrapAsync(CourseHandler.remove));
+router.delete("/:course_code", wrapAsync(isAuthenticated), wrapAsync(CourseHandler.remove));
 
 
 export default router;

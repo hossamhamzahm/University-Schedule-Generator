@@ -27,9 +27,9 @@ components:
             content:
                 application/json:
                     schema:
-                        type: array
-                        items:
-                            $ref: '#components/schemas/course'
+                        course:
+                            $ref: '#components/schemas/instructor'
+
                     example:
                         course:
                             course_code: 'ECEN424'
@@ -98,7 +98,7 @@ components:
                         type: array
                         items:
                             $ref: '#components/schemas/course'
-post:
+  post:
     tags: 
         - Courses
     summary: this endpoint is used to create new courses
@@ -115,5 +115,5 @@ post:
                       course:
                         $ref: '#components/schemas/course'
     responses:
-        200:
+        201:
             description: OK, course created successfully
