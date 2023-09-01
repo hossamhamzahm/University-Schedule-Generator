@@ -11,15 +11,15 @@ const User = sequelize.define(
 		},
 		f_name: {
 			type: DataTypes.STRING(20),
-			allowNull: false
+			allowNull: true
 		},
 		m_name: {
 			type: DataTypes.STRING(20),
-			allowNull: false
+			allowNull: true
 		},
 		l_name: {
 			type: DataTypes.STRING(20),
-			allowNull: false
+			allowNull: true
 		},
 	},
 	

@@ -8,7 +8,7 @@ import CourseRouter from "./router/course";
 import SectionRouter from "./router/section";
 import InstructorRouter from "./router/instructor";
 import StudentRouter from "./router/student";
-// import ScheduleRouter from "./router/schedule";
+import ScheduleRouter from "./router/schedule";
 
 
 
@@ -31,7 +31,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use("/courses", CourseRouter);
 app.use("/sections", SectionRouter);
 app.use("/instructors", InstructorRouter);
-// app.use("/schedules", ScheduleRouter);
+app.use("/schedules", ScheduleRouter);
 app.use("/", StudentRouter);
 
 
@@ -46,6 +46,8 @@ app.get("*", (req: express.Request, res: express.Response, next: express.NextFun
 // Express Error handler
 app.use((err: ExpressError, req: express.Request, res: express.Response, next: express.NextFunction) => {
     const {msg = "Internal Server Error", status = 500} = err; 
+
+    console.log(err)
     
     // console.log("Error", err.msg) 
 	// console.error(err.stack);

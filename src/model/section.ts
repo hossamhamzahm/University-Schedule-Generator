@@ -53,17 +53,18 @@ const Section = sequelize.define(
 			}
 		},
 		section_to: {
-			type: DataTypes.DATE,
+			type: DataTypes.TIME,
 			allowNull: false
 		},
 		section_from: {
-			type: DataTypes.DATE,
+			type: DataTypes.TIME,
 			allowNull: false
 		}
 	},
 
 	{
 		tableName: 'section',
+		timestamps: false,
 		underscored: true,
 		indexes: [
 			{

@@ -1,8 +1,7 @@
 -- UP MMIGRATION
 CREATE TABLE IF NOT EXISTS schedule(
-    user_username VARCHAR(30),
+    student_username VARCHAR(30),
     is_stared BOOLEAN,
-    is_archived BOOLEAN,
     is_registered BOOLEAN,
 
     schedule_id INTEGER,
@@ -14,7 +13,7 @@ CREATE TABLE IF NOT EXISTS schedule(
     thursday_id INTEGER,
     
     PRIMARY KEY(schedule_id),
-    FOREIGN KEY(user_username) REFERENCES user(user_username),
+    FOREIGN KEY(student_username) REFERENCES student(student_username),
     FOREIGN KEY(sunday_id) REFERENCES day(day_id) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY(monday_id) REFERENCES day(day_id) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY(tuesday_id) REFERENCES day(day_id) ON DELETE CASCADE ON UPDATE CASCADE,

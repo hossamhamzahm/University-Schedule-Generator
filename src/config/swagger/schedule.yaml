@@ -22,8 +22,15 @@ components:
         - Schedules
     summary: this endpoint generates all possible schedules of the specified list of courses
     description: this endpoint generates all possible schedules of the specified list of courses
-    security:
-        - BearerAuth: []
+    parameters:
+        - in: query
+          name: pageNo
+          type: integer
+          required: true
+        - in: query
+          name: limit
+          type: integer
+          required: true
     requestBody:
         required: true
         content:

@@ -1,8 +1,24 @@
-import { DayPopulated, nullDayPopulated } from "../day";
-import { SchedulePopulated } from "../schedule";
+
+import { Model } from "sequelize";
+// import { DayPopulated, DayInterface } from "../../@types/schedule_generator_algorithm/day";
+import { SchedulePopulated, ScheduleInterface } from "../../@types/schedule_generator_algorithm/schedule";
 import {CombinedCourse, extractCombinedCourseData} from "./extract_combined_course_data";
 
 
+const nullDayPopulated = {
+	hour_1_section: Model,
+	hour_2_section: Model,
+	hour_3_section: Model,
+	hour_4_section: Model,
+	hour_5_section: Model,
+	hour_6_section: Model,
+	hour_7_section: Model,
+	hour_8_section: Model,
+	hour_9_section: Model,
+	hour_10_section: Model,
+	hour_11_section: Model,
+	hour_12_section: Model,
+};
 
 
 const possibility: SchedulePopulated =  {

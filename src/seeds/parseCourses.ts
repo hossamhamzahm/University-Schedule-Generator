@@ -1,7 +1,10 @@
 import fs from "fs";
 import path from "path";
 import readline from "readline";
-import { Section } from "../model/section";
+import SectionInterface from "../@types/schedule_generator_algorithm/section";
+// import Section from "../model/section";
+
+
 
 
 const file_path = path.join(__dirname, "data.txt");
@@ -14,10 +17,10 @@ const rl = readline.createInterface({
 
 
 
-let sections: Section[] = [];
+let sections: SectionInterface[] = [];
 let cnt = 0;
 
-let course: Section = {
+let course: SectionInterface = {
 	course_code: "",
 	course_name: "",
 	section_name: "",
@@ -30,26 +33,26 @@ let course: Section = {
 
 
 
-const sectionRex = new RegExp("[Section:] ([0-9]{0,2}[A-Z]?) | Session");
+const sectionRex = new RegExp("[SectionInterface:] ([0-9]{0,2}[A-Z]?) | Session");
 const typeRex = new RegExp(".*[Subtype:] ([a-zA-z]*)");
 // 10:30 AM - 12:29 PM
 
 
 
-let parse = async (): Promise<Section[]> => {
+let parse = async (): Promise<SectionInterface[]> => {
 	for await (const line of rl) {
-        if(line.startsWith('ECEN')) cnt = 0;
+		if (line.startsWith('ECEN')) cnt = 0;
 		switch (cnt) {
 			case 0:
 				course.course_code = line.split(": ")[0];
 				course.course_name = line.split(": ")[1];
 				break;
 			case 1:
-                // @ts-ignore
-                course.section_name = line.match(sectionRex)[1].trim();
-                // @ts-ignore
-                course.section_type = line.match(typeRex)[1].trim();
-                break;
+				// @ts-ignore
+				course.section_name = line.match(sectionRex)[1].trim();
+				// @ts-ignore
+				course.section_type = line.match(typeRex)[1].trim();
+				break;
 			case 2:
 				break;
 			case 3:
@@ -70,6 +73,8 @@ let parse = async (): Promise<Section[]> => {
 
 				to = to.split(" ")[0];
 				from = from.split(" ")[0];
+
+				// console.log(to, from)
 				course.section_to = to;
 				course.section_from = from;
 				break;
@@ -94,4 +99,5 @@ let parse = async (): Promise<Section[]> => {
 	return sections;
 };
 
+// parse()
 export default parse;
