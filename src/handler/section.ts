@@ -7,23 +7,6 @@ import { Model, Op, literal } from "sequelize";
 
 
 
-const pagination = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-	let { pageNo = "1", limit = "20", q = undefined } = req.query;
-	const offset = (parseInt(pageNo as string) - 1) * parseInt(limit as string);
-
-
-	const results = {
-		pagination: {
-			pageNo,
-			limit,
-			totalNumber: 0
-		},
-		results: []
-	}
-
-	res.locals.results = results;
-	next();
-}
 
 // [GET] /sections?pageNO=1&limit=15
 const index = async(req: Request, res: Response, next: NextFunction): Promise<void> => {
@@ -51,9 +34,7 @@ const index = async(req: Request, res: Response, next: NextFunction): Promise<vo
 
 	res.locals.results.pagination.totalNumber = sections.count;
 	res.locals.results.results = sections.rows;
-
 	res.status(200).send(res.locals.results)
-	// res.status(200).send(sections)
 }
 
 
@@ -72,9 +53,11 @@ const show = async (req: Request, res: Response, next: NextFunction): Promise<vo
 const showCourseSections = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
 	const { course_code } = req.params;
 
-	const section = await Section.findAll({where: {course_code}});
-
-	res.send(section);
+	const section = await Section.findAndCountAll({where: {course_code}});
+	
+	res.locals.results.pagination.totalNumber = section.count;
+	res.locals.results.results = section.rows;
+	res.status(200).send(res.locals.results)
 };
 
 
@@ -120,7 +103,6 @@ const remove = async (req: Request, res: Response, next: NextFunction): Promise<
 export default {
 	index,
 	show,
-	pagination,
 	showCourseSections,
 	create,
 	update,

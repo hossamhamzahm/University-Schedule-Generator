@@ -2,11 +2,12 @@ import express from "express";
 import InstructorHandler from "../handler/instructor";
 import wrapAsync from "../helper/wrapAsync";
 import { isAuthenticated } from "../service/student";
+import pagination from "../service/pagination";
 const router: express.Router = express.Router();
 
 
 // [GET] /instructors?pageNo=1&limit=15
-router.get("/", wrapAsync(InstructorHandler.index));
+router.get("/", wrapAsync(pagination), wrapAsync(InstructorHandler.index));
 
 // [GET] /instructors/:instructor_username
 router.get("/:instructor_username", wrapAsync(InstructorHandler.show));

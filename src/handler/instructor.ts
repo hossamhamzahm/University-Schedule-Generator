@@ -13,17 +13,18 @@ const index = async (req: Request , res: Response,  next: NextFunction): Promise
 
 	const offset = (parseInt(pageNo as string) -1) * parseInt(limit as string);
 
-	const instructors = await Instructor.findAll({ 
+	const instructors = await Instructor.findAndCountAll({ 
 		offset, 
 		limit: parseInt(limit as string),
 		include: {
 			model: User,
 			required: true,
 		},
-	}
-	);
-
-	res.send(instructors);
+	});
+	
+	res.locals.results.pagination.totalNumber = instructors.count;
+	res.locals.results.results = instructors.rows;
+	res.send(res.locals.results);
 };
 
 // [GET] /instructors/:instructor_username

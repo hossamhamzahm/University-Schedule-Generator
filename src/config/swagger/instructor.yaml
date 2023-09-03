@@ -117,9 +117,21 @@ components:
             content:
                 application/json:
                     schema:
-                        type: array
-                        items:
-                            $ref: '#components/schemas/instructor'
+                        type: object
+                        properties:
+                            pagination:
+                                types: object
+                                properties:
+                                    pagenNo: 
+                                        type: number
+                                    limit:
+                                        type: number
+                                    totalNumber:
+                                        type: number
+                            results:
+                                type: array
+                                items:
+                                    $ref: '#components/schemas/instructor'
   post:
     tags:
         - Instructors

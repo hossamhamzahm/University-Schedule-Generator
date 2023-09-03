@@ -1,3 +1,4 @@
+import { Op } from "sequelize";
 import ExpressError from "../helper/ExpressError";
 import Course from "../model/course";
 import CourseJoiSchema from "../schema/course";
@@ -6,16 +7,29 @@ import { Request, Response, NextFunction } from "express";
 
 // [GET] /courses?pageNO=1&limit=15
 const index = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-	let { pageNo = "1", limit = "20" } = req.query;
+	let { pageNo = "1", limit = "20", q = undefined } = req.query;
 
 	const offset = (parseInt(pageNo as string) - 1) * parseInt(limit as string);
+	let where: { [key: string]: any } = {};
 
-	const courses = await Course.findAll({
+	if (q) {
+		where = {
+			[Op.or]: [
+				{ course_name: { [Op.like]: `%${q}%` } },
+				{ course_code: { [Op.like]: `%${q}%` } }
+			]
+		}
+	}
+
+	const courses = await Course.findAndCountAll({
 		offset,
-		limit: parseInt(limit as string)
+		limit: parseInt(limit as string),
+		where
 	});
 
-    res.send(courses)
+	res.locals.results.pagination.totalNumber = courses.count;
+	res.locals.results.results = courses.rows;
+	res.send(res.locals.results)
 }
 
 // [GET] /courses/:courseCode
