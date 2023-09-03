@@ -1,9 +1,10 @@
 import { DataTypes } from "sequelize";
 import sequelize from "./database";
+import Section from "./section";
 
 
 const Course = sequelize.define(
-	"Course",
+	"course",
 	{
 		course_code: {
 			type: DataTypes.STRING(12),
@@ -27,6 +28,5 @@ const Course = sequelize.define(
 		]
 	}
 )
-
 
 export default Course;

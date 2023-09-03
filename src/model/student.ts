@@ -4,7 +4,7 @@ import User from './user'
 
 
 const Student = sequelize.define(
-	'Student',
+	'student',
 	{
 		student_username: {
 			type: DataTypes.STRING(35),

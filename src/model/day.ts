@@ -4,7 +4,7 @@ import Section from "./section";
 
 
 const Day = sequelize.define(
-	'Day', 
+	'day', 
 	{
 		day_id: {
 			type: DataTypes.INTEGER,

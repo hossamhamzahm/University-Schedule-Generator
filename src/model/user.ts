@@ -3,7 +3,7 @@ import sequelize from "./database";
 
 
 const User = sequelize.define(
-	"User",
+	"user",
 	{
 		user_username: {
 			type: DataTypes.STRING(35),

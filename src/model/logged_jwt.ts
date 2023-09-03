@@ -5,7 +5,7 @@ import User from "./user";
 
 
 const LoggedJwt = sequelize.define(
-    "LoggedJwt",
+    "logged_jwt",
     {
         jwt_id: {
             type: DataTypes.INTEGER,

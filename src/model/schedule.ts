@@ -5,7 +5,7 @@ import Student from "./student";
 
 
 const Schedule = sequelize.define(
-	'Schedule',
+	'schedule',
 	{
 		schedule_id: {
 			type: DataTypes.INTEGER,

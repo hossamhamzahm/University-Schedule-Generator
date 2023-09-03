@@ -3,22 +3,57 @@ import Section from "../model/section";
 import SectionJoiSchema from "../schema/section";
 import ExpressError from "../helper/ExpressError";
 import Course from "../model/course";
+import { Model, Op, literal } from "sequelize";
 
 
 
+const pagination = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+	let { pageNo = "1", limit = "20", q = undefined } = req.query;
+	const offset = (parseInt(pageNo as string) - 1) * parseInt(limit as string);
+
+
+	const results = {
+		pagination: {
+			pageNo,
+			limit,
+			totalNumber: 0
+		},
+		results: []
+	}
+
+	res.locals.results = results;
+	next();
+}
 
 // [GET] /sections?pageNO=1&limit=15
 const index = async(req: Request, res: Response, next: NextFunction): Promise<void> => {
-	let { pageNo = "1", limit = "20" } = req.query;
+	let { pageNo = "1", limit = "20", q = undefined } = req.query;
 
-	const offset = (parseInt(pageNo as string) - 1) * parseInt(limit as string);
-
-	const sections = await Section.findAll({
-		offset,
-		limit: parseInt(limit as string)
-	});
+	let where: {[key: string]: any} = {};
 	
-	res.status(200).send(sections)
+	if(q){
+		const sub_where = {
+			[Op.or]: [
+				{ course_name: { [Op.like]: `%${q}%` } },
+				{ course_code: { [Op.like]: `%${q}%` } }
+			]
+		}
+
+		const courses = (await Course.findAll({where: sub_where})).map(course => course.getDataValue('course_code'));
+		where['course_code'] = { [Op.in]: courses };
+	}
+
+	const sections = await Section.findAndCountAll({
+		offset: (parseInt(pageNo as string) - 1) * parseInt(limit as string),
+		limit: parseInt(limit as string),
+		where,
+	});	
+
+	res.locals.results.pagination.totalNumber = sections.count;
+	res.locals.results.results = sections.rows;
+
+	res.status(200).send(res.locals.results)
+	// res.status(200).send(sections)
 }
 
 
@@ -85,6 +120,7 @@ const remove = async (req: Request, res: Response, next: NextFunction): Promise<
 export default {
 	index,
 	show,
+	pagination,
 	showCourseSections,
 	create,
 	update,

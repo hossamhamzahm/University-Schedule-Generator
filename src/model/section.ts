@@ -5,7 +5,7 @@ import Instructor from "./instructor";
 
 
 const Section = sequelize.define(
-	'Section',
+	'section',
 	{
 		section_id: {
 			type: DataTypes.INTEGER,
@@ -14,7 +14,6 @@ const Section = sequelize.define(
 		},
 		course_code: {
 			type: DataTypes.STRING(35),
-			primaryKey: true,
 			references: {
 				model: Course,
 				key: 'course_code',
@@ -76,6 +75,9 @@ const Section = sequelize.define(
 	}
 );
 
+Course.hasMany(Section, {
+	foreignKey: 'course_code'
+});
 
 Section.belongsTo(Course, {
 	foreignKey: "course_code",

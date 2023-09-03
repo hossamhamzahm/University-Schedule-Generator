@@ -9,7 +9,7 @@ if (process.env.NODE_ENV !== 'prod') {
         storage: config.db_host,
         host: config.db_host,
         port: config.db_port,
-        logging: false,
+        logging: true,
         // dialectOptions: {
         // 	// useUTC: false, //for reading from database
         // 	dateStrings: true,
