@@ -21,4 +21,6 @@ export default{
     refresher_token_secret: <string>process.env.REFRESHER_TOKEN_SECRET as string,
     bcrypt_pepper: <string>process.env.BCRYPT_PEPPER,
     salt_rounds: parseInt(<string>process.env.SALT_ROUNDS),
+    power_campus_username: process.env.POWER_CAMPUS_USERNAME,
+    power_campus_password: process.env.POWER_CAMPUS_PASSWORD
 }

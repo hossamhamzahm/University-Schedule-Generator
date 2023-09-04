@@ -20,23 +20,31 @@ import generate_tables from "../model/generate_tables_algorithm/generate_tables"
 // [POST] /sections
 const generate = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
 	let { pageNo = "1", limit = "20" } = req.query;
+
+	console.log(req.query)
+	console.log(pageNo)
+	console.log(res.locals.results.pageNO)
+	
 	const strt = (parseInt(pageNo as string) - 1) * parseInt(limit as string);
 	const ed = strt + parseInt(limit as string) -1;
 
 	const needed_courses = (await NeededCoursesJoiSchema.validateAsync(req.body)).needed_courses;
 	const schedules = await generate_tables(needed_courses);
 	
-	console.log(schedules.length)
+	console.log("Number of generated schedules:", schedules.length)
+
 	let responses = [];
 
 	if(strt < schedules.length){
 		if (schedules.length >= ed) responses = schedules.slice(strt, ed);
-		else responses = schedules.slice(strt, ed);
+		else responses = schedules.slice(strt);
 	}
-	// if (schedules.length > 20) responses = schedules.slice(strt, schedules.length);
 	else responses = schedules;
 
-	res.send(responses)
+
+	res.locals.results.pagination.totalNumber = schedules.length;
+	res.locals.results.results = responses;
+	res.send(res.locals.results);
 };
 
 
