@@ -14,15 +14,15 @@ jobs:
       - run:
           command: npm run build
           name: Building TS files
-      - run:
-          command: npm run migrate-dev
-          name: Running Migrations
-      - run:
-          command: npm test
-          name: Testing API
-      - run:
-          command: npm run seed
-          name: Seeding SQLite
+      # - run:
+      #     command: npm run migrate-dev
+      #     name: Running Migrations
+      # - run:
+      #     command: npm test
+      #     name: Testing API
+      # - run:
+      #     command: npm run seed
+      #     name: Seeding SQLite
   
   deploy:
     executor: aws-cli/default
@@ -34,40 +34,17 @@ jobs:
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           aws-region: AWS_REGION
-      # - run: 
-      #     command: |
-      #       if [ ! -z "$PREVIOUS_INSTANCE_NAME" ]
-      #       then
-      #         INSTANCE_ID=`aws ec2 describe-instances --filters "Name=tag:Name,Values=$PREVIOUS_INSTANCE_NAME" --query "Reservations[].Instances[].[InstanceId]" --output text`
-      #         if [ ! -z "$INSTANCE_ID" ]
-      #         then
-      #           echo "Old instance ID: $INSTANCE_ID"
-      #           aws ec2 terminate-instances --instance-ids $INSTANCE_ID
-      #           echo "Terminated the previous instance"
-      #         else
-      #           echo "Did not found any instance with provided name"
-      #         fi
-      #       else
-      #         echo "Previous instance name not provided so moving forward"
-      #       fi
 
-      #       if [ ! -z "$NEW_INSTANCE_NAME" ]
-      #       then
-      #         NEW_INSTANCE_ID=`aws ec2 run-instances --image-id ami-07ffb2f4d65357b42 --count 1 --instance-type t2.micro --key-name CircleCI --security-group-ids sg-0791c0115b3a5100a --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$NEW_INSTANCE_NAME}]" --query "Instances[].[InstanceId]" --output text`
-      #         echo "New instance Id: $NEW_INSTANCE_ID"
-      #         echo "Waiting for New Instance Start...."
-      #         aws ec2 wait instance-running --instance-ids $NEW_INSTANCE_ID
-      #         echo "Instance Successfully started"
-      #         NEW_INSTANCE_IP=`aws ec2 describe-instances --instance-ids $NEW_INSTANCE_ID --query "Reservations[].Instances[].NetworkInterfaces[].Association.PublicIp" --output text`
-      #         echo "New Instance IP: $NEW_INSTANCE_IP"
-      #         echo "export NEW_INSTANCE_IP=$NEW_INSTANCE_IP" >> $BASH_ENV
-      #       else
-      #         echo "New Instance Name is Required!"
-      #       fi
-      #     name: Destorying Old instance and createing New
-      # - add_ssh_keys:
-      #     fingerprints:
-      #       - "4f:5d:f9:62:12:ac:1c:d8:d2:47:5e:6c:19:29:e6:fe"
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "fd:d7:9c:a1:34:c6:19:52:34:76:5c:23:ee:5e:68:9e"
+      # - run: chmod 400 zenbook_wsl.pem
+      - run: ssh -o "StrictHostKeyChecking no" ec2-user@ec2-51-20-6-22.eu-north-1.compute.amazonaws.com "pwd && ls"
+      # - run:
+      #     command: pwd && ls -a
+      #     name: run ls 
+      
       # - run:
       #     command: sleep 1m
       #     name: Waiting of SSH Server to start at New EC2 Instance

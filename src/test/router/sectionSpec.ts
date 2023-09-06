@@ -104,7 +104,8 @@ describe('Testing section Endpoints', () => {
                         console.log(res.body);
                         return done.fail();
                     }
-                    expect(Array.isArray(res.body)).toBeTruthy();
+                    
+                    expect(Array.isArray(res.body.results)).toBeTruthy();
                     return done();
                 });
         });
