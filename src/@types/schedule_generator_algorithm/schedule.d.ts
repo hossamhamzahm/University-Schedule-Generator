@@ -24,11 +24,11 @@ interface SchedulePopulated {
 
     schedule_id?: number;
 
-    sunday: DayPopulated;
-    monday: DayPopulated;
-    tuesday: DayPopulated;
-    wednesday: DayPopulated;
-    thursday: DayPopulated;
+    sunday: nullDayPopulated;
+    monday: nullDayPopulated;
+    tuesday: nullDayPopulated;
+    wednesday: nullDayPopulated;
+    thursday: nullDayPopulated;
 }
 
 export {

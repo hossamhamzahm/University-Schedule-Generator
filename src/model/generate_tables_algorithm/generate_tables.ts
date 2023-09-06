@@ -1,23 +1,21 @@
-
-import { Model } from "sequelize";
 // import { DayPopulated, DayInterface } from "../../@types/schedule_generator_algorithm/day";
 import { SchedulePopulated, ScheduleInterface } from "../../@types/schedule_generator_algorithm/schedule";
 import {CombinedCourse, extractCombinedCourseData} from "./extract_combined_course_data";
 
 
 const nullDayPopulated = {
-	hour_1_section: Model,
-	hour_2_section: Model,
-	hour_3_section: Model,
-	hour_4_section: Model,
-	hour_5_section: Model,
-	hour_6_section: Model,
-	hour_7_section: Model,
-	hour_8_section: Model,
-	hour_9_section: Model,
-	hour_10_section: Model,
-	hour_11_section: Model,
-	hour_12_section: Model,
+	hour_1_section: null,
+	hour_2_section: null,
+	hour_3_section: null,
+	hour_4_section: null,
+	hour_5_section: null,
+	hour_6_section: null,
+	hour_7_section: null,
+	hour_8_section: null,
+	hour_9_section: null,
+	hour_10_section: null,
+	hour_11_section: null,
+	hour_12_section: null,
 };
 
 
@@ -81,6 +79,7 @@ const getCombinedCourses = async (needed_courses: string[], courses: CombinedCou
 const generate_schedules = async (coursesList: CombinedCourse[][], idx: number, allPossibilities: SchedulePopulated[]): Promise<void> => {
 	// base case
 	if (idx >= coursesList.length) {
+		if(idx == 0) return ;
 		allPossibilities.push(JSON.parse(JSON.stringify(possibility)));
 		return;
 	}

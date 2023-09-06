@@ -20,10 +20,6 @@ import generate_tables from "../model/generate_tables_algorithm/generate_tables"
 // [POST] /sections
 const generate = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
 	let { pageNo = "1", limit = "20" } = req.query;
-
-	console.log(req.query)
-	console.log(pageNo)
-	console.log(res.locals.results.pageNO)
 	
 	const strt = (parseInt(pageNo as string) - 1) * parseInt(limit as string);
 	const ed = strt + parseInt(limit as string) -1;
