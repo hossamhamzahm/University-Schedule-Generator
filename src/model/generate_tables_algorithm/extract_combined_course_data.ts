@@ -6,6 +6,10 @@ import { Model } from "sequelize";
 
 
 const hour_to_idx = {
+	"8:30:00": 0,
+	"9:20:00": 0,
+	"9:29:00": 0,
+	"9:30:00": 1,
 	"08:30:00": 0,
 	"09:20:00": 0,
 	"09:29:00": 0,
@@ -94,6 +98,9 @@ const setTime = (combined_course: CombinedCourse, section: Model): void => {
 	let from: string = section.getDataValue('section_from') as string;
 	let to: string = section.getDataValue('section_to') as string;
 
+	if (from.length < 7) from += ":00"
+	if (to.length < 7) to += ":00"
+
 	// if (from in Object.keys(hour_to_idx) == false) throw new Error();
 	// if (to in Object.keys(hour_to_idx) == false) throw new Error();
 
@@ -112,6 +119,9 @@ const setTime = (combined_course: CombinedCourse, section: Model): void => {
 const releaseTime = (combined_course: CombinedCourse, section: Model): void => {
 	let from: string = section.getDataValue('section_from') as string;
 	let to: string = section.getDataValue('section_to') as string;
+
+	if (from.length < 7) from += ":00"
+	if (to.length < 7) to += ":00"
 
 	// if (from in Object.keys(hour_to_idx) == false) throw new Error();
 	// if (to in Object.keys(hour_to_idx) == false) throw new Error();
@@ -211,7 +221,10 @@ const extractCombinedCourseData = async (course_code: string): Promise<CombinedC
 		if (labs.length == 0) combined_courses.push(JSON.parse(JSON.stringify(combined_course)));
 	}
 
-    // console.log(combined_courses[0].combined_times, combined_courses.length)
+	// console.log(combined_courses[0].combined_times, combined_courses.length)
+	// console.log(lecs)
+	// console.log(tuts)
+	// console.log(labs)
 	return combined_courses;
 };
 

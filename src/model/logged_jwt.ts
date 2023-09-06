@@ -14,7 +14,6 @@ const LoggedJwt = sequelize.define(
         },
         user_username: {
             type: DataTypes.STRING(35),
-            primaryKey: true,
             references: {
                 model: User,
                 key: 'user_username',

@@ -101,6 +101,11 @@ const generate_schedules = async (coursesList: CombinedCourse[][], idx: number, 
 async function generate_tables(needed_courses: string[]){
     const courses: CombinedCourse[][] = [];
 	await getCombinedCourses(needed_courses, courses);
+
+
+	
+	// console.log(courses[0][0].combined_times) 
+
     const allPossibilities: SchedulePopulated[] = [];
 
 	await generate_schedules(courses, 0, allPossibilities);

@@ -10,6 +10,7 @@
 		"start": "node dist/index.js",
 		"migrate-dev": "ts-node src/model/migrate.ts && npm run seed",
 		"seed": "ts-node src/seeds/index.ts",
+		"power-campus-seed": "ts-node src/seeds/api_index.ts",
 		"db-migrate": "db-migrate --env dev reset && db-migrate --env dev up && ts-node src/seeds/index.ts"
 	},
 	"keywords": [],
@@ -23,6 +24,7 @@
 		"jsonwebtoken": "^9.0.0",
 		"mysql2": "^2.3.3",
 		"sequelize": "^6.32.1",
+		"sqlite3": "^5.1.6",
 		"swagger-jsdoc": "^6.2.7",
 		"swagger-ui-express": "^4.6.0",
 		"ts-watch": "^1.0.8"
