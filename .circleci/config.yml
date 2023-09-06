@@ -12,6 +12,9 @@ jobs:
       - node/install-packages:
           pkg-manager: npm
       - run:
+          command: npm build
+          name: Building TS files
+      - run:
           command: npm test
           name: Testing API
 
