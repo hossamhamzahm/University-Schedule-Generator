@@ -12,12 +12,18 @@ jobs:
       - node/install-packages:
           pkg-manager: npm
       - run:
-          command: npm build
+          command: npm run build
           name: Building TS files
+      - run:
+          command: npm run migrate-dev
+          name: Running Migrations
       - run:
           command: npm test
           name: Testing API
-
+      - run:
+          command: npm run seed
+          name: Seeding SQLite
+  
   deploy:
     executor: aws-cli/default
     environment:

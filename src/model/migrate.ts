@@ -18,9 +18,9 @@ import Schedule from "./schedule";
 
 
 const migrate = async (force = false) => {
-	if(force){
-		await sequelize.query("SET FOREIGN_KEY_CHECKS = 0;");
-	}
+	// if(force){
+	// 	await sequelize.query("SET FOREIGN_KEY_CHECKS = 0;");
+	// }
 
 	await User.sync({ force });
 	await Student.sync({ force });
@@ -33,7 +33,7 @@ const migrate = async (force = false) => {
 
 
 	if(force){
-		await sequelize.query("SET FOREIGN_KEY_CHECKS = 1;");
+		// await sequelize.query("SET FOREIGN_KEY_CHECKS = 1;");
 		process.exit(0);
 	}
 }
