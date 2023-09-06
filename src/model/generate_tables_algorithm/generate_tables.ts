@@ -1,5 +1,5 @@
 // import { DayPopulated, DayInterface } from "../../@types/schedule_generator_algorithm/day";
-import { SchedulePopulated, ScheduleInterface } from "../../@types/schedule_generator_algorithm/schedule";
+import { SchedulePopulated, ScheduleInterface } from "../../@types/schedule";
 import {CombinedCourse, extractCombinedCourseData} from "./extract_combined_course_data";
 
 

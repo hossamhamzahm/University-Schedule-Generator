@@ -1,6 +1,6 @@
 import Course from "../model/course";
 import Instructor from "../model/instructor";
-import SectionInterface from "../@types/schedule_generator_algorithm/section";
+import SectionInterface from "../@types/section";
 import Section from "../model/section";
 import User from "../model/user";
 import parse from "./parseCourses";

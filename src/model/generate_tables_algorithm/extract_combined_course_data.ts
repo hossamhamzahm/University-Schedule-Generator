@@ -1,6 +1,6 @@
 import Section  from "../section";
-import { DayPopulated, DayInterface } from "../../@types/schedule_generator_algorithm/day";
-import { SchedulePopulated, ScheduleInterface } from "../../@types/schedule_generator_algorithm/schedule";
+import { DayPopulated, DayInterface } from "../../@types/day";
+import { SchedulePopulated, ScheduleInterface } from "../../@types/schedule";
 import { Model } from "sequelize";
 
 

@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import readline from "readline";
-import SectionInterface from "../@types/schedule_generator_algorithm/section";
+import SectionInterface from "../@types/section";
 // import Section from "../model/section";
 
 
