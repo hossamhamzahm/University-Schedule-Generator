@@ -58,7 +58,7 @@ jobs:
             echo "export ENV=${ENV}" >> $BASH_ENV
             echo "export URL=${URL}" >> $BASH_ENV
             echo "End env"
-            scp $BASH_ENV -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST:University-Schedule-Generator
+            scp $BASH_ENV $SSH_USER@$SSH_HOST:University-Schedule-Generator
             
       - run:
           command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && git pull origin deploy && source set_env.sh && sh deploy.sh"
