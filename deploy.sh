@@ -1,7 +1,14 @@
 #!/usr/bin/env sh
 npm i
-sudo npm install pm2 -g
+
 npm run build 
+
 npm run migrate-dev
-npm run stop
+
+# stop the current node server
+ps | grep node
+if [ $? -eq 0 ]; then
+  killall -9 node
+fi
+
 npm run start
