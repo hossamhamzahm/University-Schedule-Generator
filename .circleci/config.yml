@@ -36,28 +36,33 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "fd:d7:9c:a1:34:c6:19:52:34:76:5c:23:ee:5e:68:9e"
-      # - run: chmod 400 zenbook_wsl.pem
+      - run:
+          name: Export SSH Environment Variables
+          command: |
+            echo "Start env"
+            export "POWER_CAMPUS_USERNAME=${POWER_CAMPUS_USERNAME}" >> $BASH_ENV
+            export "POWER_CAMPUS_PASSWORD=${POWER_CAMPUS_PASSWORD}" >> $BASH_ENV
+
+            export "DB_NAME=${DB_NAME}" >> $BASH_ENV
+
+            export "ACCESS_TOKEN_SECRET=${ACCESS_TOKEN_SECRET}" >> $BASH_ENV
+            export "REFRESHER_TOKEN_SECRET=${REFRESHER_TOKEN_SECRET}" >> $BASH_ENV
+            export "BCRYPT_PEPPER=${BCRYPT_PEPPER}" >> $BASH_ENV
+            export "SALT_ROUNDS=${SALT_ROUNDS}" >> $BASH_ENV
+            export "ENV=${ENV}" >> $BASH_ENV
+            export "URL=${URL}" >> $BASH_ENV
+            echo "End env"
+      - run:
+          command: |
+            eval "$(< $BASH_ENV)"
+            ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST  echo "url: $URL"
+            
+          name: Setup Env using ssh
+            
       - run:
           command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && git pull origin deploy && sh deploy.sh"
           name: Deployment
       
-      - run:
-          command: |
-            ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST 
-            echo "start env"
-            export POWER_CAMPUS_USERNAME=$POWER_CAMPUS_USERNAME
-            export POWER_CAMPUS_PASSWORD=$POWER_CAMPUS_PASSWORD
-
-            export DB_NAME=$DB_NAME
-
-            export ACCESS_TOKEN_SECRET=$ACCESS_TOKEN_SECRET
-            export REFRESHER_TOKEN_SECRET=$REFRESHER_TOKEN_SECRET
-            export BCRYPT_PEPPER=$BCRYPT_PEPPER
-            export SALT_ROUNDS=$SALT_ROUNDS
-            export ENV=$ENV
-            export URL=$URL
-            echo "end env"
-          name: Setup Env 
       
       # - run:
       #     command: sleep 1m
