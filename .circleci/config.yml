@@ -66,11 +66,11 @@ jobs:
             scp $BASH_ENV $SSH_USER@$SSH_HOST:schedule_generator_angular_app
             
       - run:
-          command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && source .bash_env* &&  'nohup ./deploy.sh &' && exit 0"
+          command: timeout 1m ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && source .bash_env* &&  nohup ./deploy.sh && node dist/index.js" ; if [ $? -ne 0 ]; then exit 0; fi
           name: API Deployment
           # background: true
       - run:
-          command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd schedule_generator_angular_app && source .bash_env* &&  'nohup ./deploy.sh &' && exit 0"
+          command: timeout 1m ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd schedule_generator_angular_app && source .bash_env* &&  nohup ./deploy.sh && node dist/index.js" ; if [ $? -ne 0 ]; then exit 0; fi
           name: Front-End Deployment
           # background: true
       
