@@ -49,7 +49,7 @@ jobs:
             echo "export POWER_CAMPUS_USERNAME=${POWER_CAMPUS_USERNAME}" >> $BASH_ENV
             echo "export POWER_CAMPUS_PASSWORD=${POWER_CAMPUS_PASSWORD}" >> $BASH_ENV
 
-            echo "export "DB_NAME=${DB_NAME}" >> $BASH_ENV
+            echo "export DB_NAME=${DB_NAME}" >> $BASH_ENV
 
             echo "export ACCESS_TOKEN_SECRET=${ACCESS_TOKEN_SECRET}" >> $BASH_ENV
             echo "export REFRESHER_TOKEN_SECRET=${REFRESHER_TOKEN_SECRET}" >> $BASH_ENV
