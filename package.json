@@ -7,7 +7,7 @@
 		"test": "jasmine",
 		"watch": "nodemon src/index.ts # tsc-watch --esModuleInterop src/index.ts --outDir ./dist --onSuccess \"node ./dist/index.js\"",
 		"build": "tsc",
-		"start": "NODE_ENV=prod node dist/index.js",
+		"start": "NODE_ENV=prod node dist/index.js &",
 		"migrate-dev": "ts-node src/model/migrate.ts",
 		"seed": "ts-node src/seeds/index.ts",
 		"power-campus-seed": "ts-node src/seeds/api_index.ts",
