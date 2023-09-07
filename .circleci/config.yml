@@ -38,7 +38,7 @@ jobs:
             - "fd:d7:9c:a1:34:c6:19:52:34:76:5c:23:ee:5e:68:9e"
       # - run: chmod 400 zenbook_wsl.pem
       - run:
-          command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && sh deploy.sh npm"
+          command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && sh deploy.sh"
           name: Deployment
       # - run:
       #     command: pwd && ls -a
