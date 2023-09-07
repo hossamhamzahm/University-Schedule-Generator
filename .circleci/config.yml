@@ -61,7 +61,7 @@ jobs:
             scp $BASH_ENV $SSH_USER@$SSH_HOST:University-Schedule-Generator
             
       - run:
-          command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && source .bash_env* && echo $URL && sh deploy.sh"
+          command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && source .bash_env* && source deploy.sh"
           name: Deployment
       
       
