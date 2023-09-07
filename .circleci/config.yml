@@ -44,17 +44,19 @@ jobs:
       - run:
           command: |
             ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST 
-            POWER_CAMPUS_USERNAME=$POWER_CAMPUS_USERNAME
-            POWER_CAMPUS_PASSWORD=$POWER_CAMPUS_PASSWORD
+            echo "start env"
+            export POWER_CAMPUS_USERNAME=$POWER_CAMPUS_USERNAME
+            export POWER_CAMPUS_PASSWORD=$POWER_CAMPUS_PASSWORD
 
-            DB_NAME=$DB_NAME
+            export DB_NAME=$DB_NAME
 
-            ACCESS_TOKEN_SECRET=$ACCESS_TOKEN_SECRET
-            REFRESHER_TOKEN_SECRET=$REFRESHER_TOKEN_SECRET
-            BCRYPT_PEPPER=$BCRYPT_PEPPER
-            SALT_ROUNDS=$SALT_ROUNDS
-            ENV=$ENV
-            URL=$URL
+            export ACCESS_TOKEN_SECRET=$ACCESS_TOKEN_SECRET
+            export REFRESHER_TOKEN_SECRET=$REFRESHER_TOKEN_SECRET
+            export BCRYPT_PEPPER=$BCRYPT_PEPPER
+            export SALT_ROUNDS=$SALT_ROUNDS
+            export ENV=$ENV
+            export URL=$URL
+            echo "end env"
           name: Setup Env 
       
       # - run:
