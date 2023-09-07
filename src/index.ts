@@ -62,6 +62,6 @@ app.use((err: ExpressError, req: express.Request, res: express.Response, next: e
 
 app.listen(Config.port, async() => {
     await migrate()
-    console.log("Listening on port", Config.port)
+    console.log("[New Build] Listening on port", Config.port)
 });
 export default app;
