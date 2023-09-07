@@ -11,6 +11,5 @@ if [ $? -eq 0 ]; then
   killall -9 node
 fi
 
-npm run start
 
 exit 0
