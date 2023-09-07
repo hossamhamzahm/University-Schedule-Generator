@@ -38,7 +38,7 @@ jobs:
             - "fd:d7:9c:a1:34:c6:19:52:34:76:5c:23:ee:5e:68:9e"
 
       - run:
-          command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && git pull origin deploy"
+          command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && git pull origin deploy && rm .bash_env*"
           name: Pull code from deploy branch
 
       - run:
@@ -61,7 +61,7 @@ jobs:
             scp $BASH_ENV $SSH_USER@$SSH_HOST:University-Schedule-Generator
             
       - run:
-          command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && git pull origin deploy && source set_env.sh && sh deploy.sh"
+          command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && source .bash_env* && sh deploy.sh"
           name: Deployment
       
       
