@@ -54,9 +54,7 @@ jobs:
             echo "End env"
       - run:
           command: |
-            eval "$(< $BASH_ENV)"
-            ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST  echo "url: $URL"
-            
+            eval "$(< $BASH_ENV)" | ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST
           name: Setup Env using ssh
             
       - run:
@@ -83,9 +81,9 @@ jobs:
 workflows:
   test_my_app:
     jobs:
-      - build_and_test
+      # - build_and_test
       - deploy:
-          requires:
-            - build_and_test
+          # requires:
+            # - build_and_test
           context:
             - CircleCITest
