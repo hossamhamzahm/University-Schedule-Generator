@@ -5,6 +5,8 @@ if(process.env.NODE_ENV != "prod")
     dotenv.config({ path: path.join(__dirname, "..", "..", ".env") });
 
 
+console.log(process.env.URL)
+
 export default{
     port: process.env.PORT || 3030,
     url: process.env.URL || 'http://localhost:' + (process.env.PORT || 3030),

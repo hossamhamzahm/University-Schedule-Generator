@@ -19,5 +19,6 @@ const swaggerOptions: swaggerJSDoc.Options = {
 	apis: ["./src/config/**/*.yaml", "./config/**/*.yaml"], // "./**/*.ts", 
 };
 
+console.log(config.url),
 
 export default swaggerOptions;
