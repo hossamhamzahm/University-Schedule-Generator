@@ -7,7 +7,7 @@
 		"test": "jasmine",
 		"watch": "nodemon src/index.ts # tsc-watch --esModuleInterop src/index.ts --outDir ./dist --onSuccess \"node ./dist/index.js\"",
 		"build": "tsc",
-		"start": "pm2 start dist/index.js",
+		"start": "NODE_ENV=prod pm2 start dist/index.js",
 		"stop": "pm2 stop dist/index.js",
 		"migrate-dev": "ts-node src/model/migrate.ts",
 		"seed": "ts-node src/seeds/index.ts",
