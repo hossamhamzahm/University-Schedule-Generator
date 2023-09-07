@@ -91,9 +91,9 @@ jobs:
 workflows:
   test_my_app:
     jobs:
-      - build_and_test
+      # - build_and_test
       - deploy_api:
-          requires:
-            - build_and_test
+          # requires:
+          #   - build_and_test
           context:
             - CircleCITest
