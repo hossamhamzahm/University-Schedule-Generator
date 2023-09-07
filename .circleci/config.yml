@@ -66,13 +66,13 @@ jobs:
             scp $BASH_ENV $SSH_USER@$SSH_HOST:schedule_generator_angular_app
             
       - run:
-          command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && source .bash_env* && source deploy.sh"
+          command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && source .bash_env* && source deploy.sh &"
           name: API Deployment
-          background: true
+          # background: true
       - run:
-          command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd schedule_generator_angular_app && source .bash_env* && source deploy.sh"
+          command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd schedule_generator_angular_app && source .bash_env* && source deploy.sh &"
           name: Front-End Deployment
-          background: true
+          # background: true
       
       # - run:
       #     command: sleep 1m
