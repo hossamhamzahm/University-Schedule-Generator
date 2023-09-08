@@ -2,6 +2,8 @@ import express from "express";
 import cors from "cors";
 import ExpressError from "./helper/ExpressError";
 import Config from "./config";
+import https from "https"
+import fs from "fs"
 
 
 import CourseRouter from "./router/course";
@@ -60,8 +62,23 @@ app.use((err: ExpressError, req: express.Request, res: express.Response, next: e
 
 
 
-app.listen(Config.port, async() => {
-    await migrate()
-    console.log("[New Build] Listening on port", Config.port)
+// app.listen(Config.port, async() => {
+//     await migrate()
+//     console.log("[New Build] Listening on port", Config.port)
+// });
+
+const sslServer = https.createServer({
+    key: fs.readFileSync("/etc/letsencrypt/live/gadwelooh.ddns.net/privkey.pem"),
+    cert: fs.readFileSync("/etc/letsencrypt/live/gadwelooh.ddns.net/fullchain.pem"),
+}, app)
+
+
+
+sslServer.listen(Config.port, async () => {
+    await migrate();
+    if (process.env.NODE_ENV != "test")
+        console.log(`Server is listening on port: ${Config.port}`);
 });
+
+
 export default app;

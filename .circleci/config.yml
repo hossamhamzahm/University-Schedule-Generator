@@ -41,9 +41,9 @@ jobs:
           command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && git pull origin deploy && rm .bash_env*"
           name: Pull code from deploy branch for api
       
-      - run:
-          command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd schedule_generator_angular_app && git pull origin master && rm .bash_env*"
-          name: Pull code from master branch for front-end
+      # - run:
+      #     command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd schedule_generator_angular_app && git pull origin master && rm .bash_env*"
+      #     name: Pull code from master branch for front-end
 
       - run:
           name: Export SSH Environment Variables
@@ -63,15 +63,15 @@ jobs:
             echo "export URL=${URL}" >> $BASH_ENV
             echo "End env"
             scp $BASH_ENV $SSH_USER@$SSH_HOST:University-Schedule-Generator
-            scp $BASH_ENV $SSH_USER@$SSH_HOST:schedule_generator_angular_app
+            # scp $BASH_ENV $SSH_USER@$SSH_HOST:schedule_generator_angular_app
             
       - run:
           command: ssh $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && source .bash_env* && echo before &&  source deploy.sh && echo after"
           name: API Deployment
           # background: true
-      - run:
-          command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd schedule_generator_angular_app && source .bash_env* &&  echo before && source deploy.sh && echo after"
-          name: Front-End Deployment
+      # - run:
+      #     command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd schedule_generator_angular_app && source .bash_env* &&  echo before && source deploy.sh && echo after"
+      #     name: Front-End Deployment
           # background: true
       
       # - run:
