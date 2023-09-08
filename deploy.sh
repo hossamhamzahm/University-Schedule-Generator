@@ -12,4 +12,14 @@ if [ $? -eq 0 ]; then
 else
   echo "No node process is found"
 fi
+
+
+npm run forever stop dist/index.js
+if [ $? -eq 0 ]; then
+  echo "stopped forever"
+else
+  echo "No node process is found"
+fi
+
+npm run start
 # exit 0
