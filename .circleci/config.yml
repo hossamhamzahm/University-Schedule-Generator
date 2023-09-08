@@ -66,7 +66,7 @@ jobs:
             scp $BASH_ENV $SSH_USER@$SSH_HOST:schedule_generator_angular_app
             
       - run:
-          command: timeout 1m ssh $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && source .bash_env* &&  source deploy.sh && node dist/index.js"
+          command: timeout 2m ssh $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && source .bash_env* &&  source deploy.sh && node dist/index.js"
           name: API Deployment
           # background: true
       - run:
