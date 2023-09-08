@@ -9,7 +9,7 @@ npm run migrate-dev
 ps | grep node
 if [ $? -eq 0 ]; then
   killall -9 node
+else
+  echo "No node process is found"
 fi
-
-
-exit 0
+# exit 0
