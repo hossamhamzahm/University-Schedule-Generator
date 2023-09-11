@@ -144,12 +144,12 @@ async function get_data() {
     // await send_request(get_auth_mode_url, user_credentials)
     // await send_request(auth_url, user_credentials)
 
-    headers['Content-Type'] = 'text/plain;charset=UTF-8';
-    const json_data = await send_request(advanced_search_url, advanced_search_body);
-    const data = JSON.parse(json_data.data).data;
+    // headers['Content-Type'] = 'text/plain;charset=UTF-8';
+    // const json_data = await send_request(advanced_search_url, advanced_search_body);
+    // const data = JSON.parse(json_data.data).data;
 
-    // const json_data = await fs.readFileSync(path.join(__dirname, "data.json"), {encoding: 'utf-8'});
-    // const data = JSON.parse(JSON.parse(json_data)).data;
+    const json_data = await fs.readFileSync(path.join(__dirname, "data.json"), {encoding: 'utf-8'});
+    const data = JSON.parse(JSON.parse(json_data)).data;
 
     
     const users_string: Set<string> = new Set();
@@ -172,8 +172,6 @@ async function get_data() {
         section.section_type = api_course.eventSubType;
 
 
-        console.log(typeof api_course)
-        console.log(api_course)
 
         if (!api_course.instructors) {
             api_course.instructors = [{ fullName: "Pending Instructor" }];
