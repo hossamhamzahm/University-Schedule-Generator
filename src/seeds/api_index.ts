@@ -4,7 +4,8 @@ import Course from "../model/course"
 import Section from "../model/section"
 import User from "../model/user"
 import Instructor from "../model/instructor"
-
+import fs from "fs";
+import path from 'path';
 
 interface IMap {
     [key: string]: any;
@@ -19,24 +20,43 @@ const advanced_search_url = 'https://register.nu.edu.eg/PowerCampusSelfService/S
 
 
 const headers: IMap = {
-    "Content-Type": "application/json",
-    'Origin': 'https://register.nu.edu.eg',
+
     'authority': 'register.nu.edu.eg',
-    'scheme': 'https',
     'path': '/PowerCampusSelfService/Sections/AdvancedSearch',
+    'scheme': 'https',
     'Accept': '*/*',
     'Accept-Encoding': 'gzip, deflate, br',
     'Accept-Language': 'en-US,en;q=0.9',
     'Cache-Control': 'max-age=0',
-    // 'Content-Length': '113',
+    "Content-Type": "application/json",
+    'Origin': 'https://register.nu.edu.eg',
     'Referer': 'https://register.nu.edu.eg/PowerCampusSelfService/Registration/Courses',
     'Sec-Ch-Ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
     'Sec-Ch-Ua-Mobile': '?0',
-    'Sec-Ch-Ua-Platform': "Windows",
+    'Sec-Ch-Ua-Platform': '"Windows"',
     'Sec-Fetch-Dest': 'empty',
     'Sec-Fetch-Mode': 'cors',
     'Sec-Fetch-Site': 'same-origin',
-    'User-Agent': ' Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+
+    // 'Origin': 'https://register.nu.edu.eg',
+    // 'authority': 'register.nu.edu.eg',
+    // 'scheme': 'https',
+    // 'path': '/PowerCampusSelfService/Sections/AdvancedSearch',
+    // 'Accept': '*/*',
+    // 'Accept-Encoding': 'gzip, deflate, br',
+    // 'Accept-Language': 'en-US,en;q=0.9',
+    // 'Cache-Control': 'max-age=0',
+    // // 'Content-Length': '113',
+    // 'Referer': 'https://register.nu.edu.eg/PowerCampusSelfService/Registration/Courses',
+    // 'Sec-Ch-Ua': '"Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"',
+    // 'Sec-Ch-Ua-Mobile': '?0',
+    // 'Sec-Ch-Ua-Platform': "Windows",
+    // 'Sec-Fetch-Dest': 'empty',
+    // 'Sec-Fetch-Mode': 'cors',
+    // 'Sec-Fetch-Site': 'same-origin',
+
+
 }
 const user_credentials = { username: config.power_campus_username, password: config.power_campus_password };
 const search_body = { keyWords: "course_name", yearTerm: "2023/SUMMER" };
@@ -121,14 +141,17 @@ function get_section_time(api_course: IMap, section: IMap) {
 
 
 async function get_data() {
-    await send_request(get_auth_mode_url, user_credentials)
-    await send_request(auth_url, user_credentials)
+    // await send_request(get_auth_mode_url, user_credentials)
+    // await send_request(auth_url, user_credentials)
 
+    headers['Content-Type'] = 'text/plain;charset=UTF-8';
     const json_data = await send_request(advanced_search_url, advanced_search_body);
     const data = JSON.parse(json_data.data).data;
 
-    // console.log(data)
+    // const json_data = await fs.readFileSync(path.join(__dirname, "data.json"), {encoding: 'utf-8'});
+    // const data = JSON.parse(JSON.parse(json_data)).data;
 
+    
     const users_string: Set<string> = new Set();
     const courses_string: Set<string> = new Set();
     const instructors_string: Set<string> = new Set();
@@ -147,6 +170,10 @@ async function get_data() {
         section.section_name = api_course.section;
         // ['Lecture', 'Lab', 'Tutorial']
         section.section_type = api_course.eventSubType;
+
+
+        console.log(typeof api_course)
+        console.log(api_course)
 
         if (!api_course.instructors) {
             api_course.instructors = [{ fullName: "Pending Instructor" }];

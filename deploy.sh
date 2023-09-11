@@ -3,7 +3,7 @@ npm i
 
 npm run build 
 
-npm run migrate-dev
+# npm run migrate-dev
 
 # stop the current node server
 ps | grep node
