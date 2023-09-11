@@ -1,4 +1,4 @@
-import Section  from "../section";
+import Section from "../section";
 import { DayPopulated, DayInterface } from "../../@types/day";
 import { SchedulePopulated, ScheduleInterface } from "../../@types/schedule";
 import { Model } from "sequelize";
@@ -66,7 +66,7 @@ const nullDayPopulated = {
 
 
 const idx_to_schema = [
-    "hour_1_section",
+	"hour_1_section",
 	"hour_2_section",
 	"hour_3_section",
 	"hour_4_section",
@@ -84,13 +84,13 @@ const idx_to_schema = [
 
 interface CombinedCourse {
 	course_code: string;
-    same_lec: Model;
+	same_lec: Model;
 	same_tut: Model | null;
 	same_lab: Model | null;
 	combined_times: SchedulePopulated;
 }
 
-// CHECK (section_day IN ('Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday')),
+// CHECK (section_day IN ('Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday')),
 // CHECK (section_type IN ('Lecture', 'Lab', 'Tutorial'))
 
 
@@ -110,7 +110,7 @@ const setTime = (combined_course: CombinedCourse, section: Model): void => {
 		// combined_course.combined_times[slot.section_day.toLowerCase()][idx_to_schema[i]] = slot;
 
 		let day = section.getDataValue('section_day').toLowerCase();
-		
+
 		// @ts-ignore
 		combined_course.combined_times[day][idx_to_schema[i]] = section;
 	}
@@ -139,7 +139,7 @@ const releaseTime = (combined_course: CombinedCourse, section: Model): void => {
 
 
 const extractCombinedCourseData = async (course_code: string): Promise<CombinedCourse[]> => {
-    const combined_courses: CombinedCourse[] = [];
+	const combined_courses: CombinedCourse[] = [];
 
 
 	// get courses in course lecs
@@ -156,16 +156,16 @@ const extractCombinedCourseData = async (course_code: string): Promise<CombinedC
 			course_code,
 			section_type: "Tutorial"
 		}
-	}); 
-	
+	});
+
 	// get courses in course labs (if any)
 	const labs = await Section.findAll({
 		where: {
 			course_code,
 			section_type: "Lab"
 		}
-	}); 
-	
+	});
+
 	for (let lec of lecs) {
 		const combined_course: CombinedCourse = {
 			course_code: lec.getDataValue('course_code'),
@@ -173,21 +173,23 @@ const extractCombinedCourseData = async (course_code: string): Promise<CombinedC
 			same_tut: null,
 			same_lab: null,
 			combined_times: {
+				saturday: JSON.parse(JSON.stringify(nullDayPopulated)),
 				sunday: JSON.parse(JSON.stringify(nullDayPopulated)),
 				monday: JSON.parse(JSON.stringify(nullDayPopulated)),
 				tuesday: JSON.parse(JSON.stringify(nullDayPopulated)),
 				wednesday: JSON.parse(JSON.stringify(nullDayPopulated)),
 				thursday: JSON.parse(JSON.stringify(nullDayPopulated)),
+				friday: JSON.parse(JSON.stringify(nullDayPopulated)),
 			},
 		};
-        
-        setTime(combined_course, lec);
-        
+
+		setTime(combined_course, lec);
+
 		for (let tut of tuts) {
 			if (!tut.getDataValue('section_name').startsWith(lec.getDataValue('section_name'))) continue;
 
 			combined_course.same_tut = tut;
-            setTime(combined_course, tut);
+			setTime(combined_course, tut);
 
 			for (let lab of labs) {
 				if (!lab.getDataValue('section_name').startsWith(lec.getDataValue('section_name'))) continue;
@@ -215,7 +217,7 @@ const extractCombinedCourseData = async (course_code: string): Promise<CombinedC
 				combined_courses.push(JSON.parse(JSON.stringify(combined_course)));
 
 				combined_course.same_lab = null;
-                releaseTime(combined_course, lab)
+				releaseTime(combined_course, lab)
 			}
 		}
 		if (labs.length == 0) combined_courses.push(JSON.parse(JSON.stringify(combined_course)));
@@ -228,7 +230,7 @@ const extractCombinedCourseData = async (course_code: string): Promise<CombinedC
 	return combined_courses;
 };
 
-export {CombinedCourse, extractCombinedCourseData}
+export { CombinedCourse, extractCombinedCourseData }
 
 
 // extractCombinedCourseData("ECEN101");

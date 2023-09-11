@@ -110,7 +110,7 @@ function get_instructors(api_course: IMap, section: IMap, users: Set<string>, in
 
 function get_section_time(api_course: IMap, section: IMap) {
     for (const schedule of api_course.schedules) {
-        // ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday']
+        // ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
         section.section_day = schedule.dayDesc;
 
         // both are time of format  00:00:00
@@ -165,10 +165,10 @@ async function get_data() {
     const instructors = [...instructors_string].map(instructor => JSON.parse(instructor));
     const courses = [...courses_string].map(course => JSON.parse(course));
 
-    await Course.bulkCreate(courses)
-    await User.bulkCreate(users)
-    await Instructor.bulkCreate(instructors)
-    await Section.bulkCreate(sections as [])
+    await Course.bulkCreate(courses, { ignoreDuplicates: true })
+    await User.bulkCreate(users, { ignoreDuplicates: true })
+    await Instructor.bulkCreate(instructors, { ignoreDuplicates: true })
+    await Section.bulkCreate(sections as [], { ignoreDuplicates: true })
 
     // console.log(sections)
     // console.log(courses.length)

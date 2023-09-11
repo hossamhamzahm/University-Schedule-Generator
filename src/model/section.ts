@@ -43,11 +43,11 @@ const Section = sequelize.define(
 		},
 		section_day: {
 			type: DataTypes.ENUM,
-			values: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+			values: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
 			validate: {
 				isIn: {
-					args: [['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday']],
-					msg: "Section day must be one of the following: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday']",
+					args: [['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']],
+					msg: "Section day must be one of the following: ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']",
 				}
 			}
 		},

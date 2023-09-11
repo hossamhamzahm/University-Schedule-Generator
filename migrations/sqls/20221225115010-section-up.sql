@@ -11,6 +11,6 @@ CREATE TABLE IF NOT EXISTS section(
     PRIMARY KEY(section_id),
     FOREIGN KEY(course_code) REFERENCES course(course_code) ON DELETE CASCADE,
     UNIQUE (course_code, section_name, section_type),
-    CHECK (section_day IN ('Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday')),
+    CHECK (section_day IN ('Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday')),
     CHECK (section_type IN ('Lecture', 'Lab', 'Tutorial'))
 );

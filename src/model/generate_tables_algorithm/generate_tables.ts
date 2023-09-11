@@ -20,11 +20,13 @@ const nullDayPopulated = {
 
 
 const possibility: SchedulePopulated =  {
-    sunday: JSON.parse(JSON.stringify(nullDayPopulated)),
+	saturday: JSON.parse(JSON.stringify(nullDayPopulated)),
+	sunday: JSON.parse(JSON.stringify(nullDayPopulated)),
     monday: JSON.parse(JSON.stringify(nullDayPopulated)),
     tuesday: JSON.parse(JSON.stringify(nullDayPopulated)),
     wednesday: JSON.parse(JSON.stringify(nullDayPopulated)),
-    thursday: JSON.parse(JSON.stringify(nullDayPopulated)),
+	thursday: JSON.parse(JSON.stringify(nullDayPopulated)),
+    friday: JSON.parse(JSON.stringify(nullDayPopulated)),
 }
 
 
