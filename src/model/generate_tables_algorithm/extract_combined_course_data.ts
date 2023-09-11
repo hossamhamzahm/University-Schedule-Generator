@@ -1,7 +1,7 @@
 import Section from "../section";
 import { DayPopulated, DayInterface } from "../../@types/day";
 import { SchedulePopulated, ScheduleInterface } from "../../@types/schedule";
-import { Model } from "sequelize";
+import { Model, Op } from "sequelize";
 
 
 
@@ -145,7 +145,9 @@ const extractCombinedCourseData = async (course_code: string): Promise<CombinedC
 	// get courses in course lecs
 	const lecs = await Section.findAll({
 		where: {
-			course_code,
+			course_code:{
+				[Op.like]: `%${course_code}%`
+			},
 			section_type: "Lecture"
 		}
 	});
@@ -153,7 +155,9 @@ const extractCombinedCourseData = async (course_code: string): Promise<CombinedC
 	// get courses in course tuts (if any)
 	const tuts = await Section.findAll({
 		where: {
-			course_code,
+			course_code: {
+				[Op.like]: `%${course_code}%`
+			},
 			section_type: "Tutorial"
 		}
 	});
@@ -161,7 +165,9 @@ const extractCombinedCourseData = async (course_code: string): Promise<CombinedC
 	// get courses in course labs (if any)
 	const labs = await Section.findAll({
 		where: {
-			course_code,
+			course_code: {
+				[Op.like]: `%${course_code}%`
+			},
 			section_type: "Lab"
 		}
 	});
