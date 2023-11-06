@@ -61,6 +61,7 @@ jobs:
             echo "export SALT_ROUNDS=${SALT_ROUNDS}" >> $BASH_ENV
             echo "export ENV=${ENV}" >> $BASH_ENV
             echo "export URL=${URL}" >> $BASH_ENV
+            echo "export PORT=${PORT}" >> $BASH_ENV
             echo "End env"
             scp $BASH_ENV $SSH_USER@$SSH_HOST:University-Schedule-Generator
             # scp $BASH_ENV $SSH_USER@$SSH_HOST:schedule_generator_angular_app

@@ -49,6 +49,9 @@ const hour_to_idx = {
 	"20:30:00": 11,
 };
 
+
+
+
 const nullDayPopulated = {
 	hour_1_section: Model,
 	hour_2_section: Model,
@@ -172,6 +175,10 @@ const extractCombinedCourseData = async (course_code: string): Promise<CombinedC
 		}
 	});
 
+	console.log(lecs.length)
+	console.log(tuts.length)
+	console.log(labs.length)
+
 	for (let lec of lecs) {
 		const combined_course: CombinedCourse = {
 			course_code: lec.getDataValue('course_code'),
@@ -190,6 +197,7 @@ const extractCombinedCourseData = async (course_code: string): Promise<CombinedC
 		};
 
 		setTime(combined_course, lec);
+		console.dir(combined_course)
 
 		for (let tut of tuts) {
 			if (!tut.getDataValue('section_name').startsWith(lec.getDataValue('section_name'))) continue;
@@ -225,8 +233,8 @@ const extractCombinedCourseData = async (course_code: string): Promise<CombinedC
 				combined_course.same_lab = null;
 				releaseTime(combined_course, lab)
 			}
+			if (labs.length == 0) combined_courses.push(JSON.parse(JSON.stringify(combined_course)));
 		}
-		if (labs.length == 0) combined_courses.push(JSON.parse(JSON.stringify(combined_course)));
 	}
 
 	// console.log(combined_courses[0].combined_times, combined_courses.length)
