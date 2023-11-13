@@ -2,7 +2,6 @@ version: 2.1
 
 orbs:
   node: circleci/node@5.0.3
-  aws-cli: circleci/aws-cli@3.1.4
 
 jobs:
   build_and_test:
@@ -22,16 +21,12 @@ jobs:
           name: Testing API
   
   deploy_api:
-    executor: aws-cli/default
+    docker: # executor type
+      - image: ubuntu:20.04
     environment:
       PREVIOUS_INSTANCE_NAME: CircleCITest
       NEW_INSTANCE_NAME: CircleCITest
     steps:
-      # - aws-cli/setup:
-      #     aws-access-key-id: AWS_ACCESS_KEY_ID
-      #     aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-      #     aws-region: AWS_REGION
-      # - checkout
 
       - add_ssh_keys:
           fingerprints:
@@ -39,11 +34,7 @@ jobs:
 
       - run:
           command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && git pull origin deploy && rm .bash_env*"
-          name: Pull code from deploy branch for api
-      
-      # - run:
-      #     command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd schedule_generator_angular_app && git pull origin master && rm .bash_env*"
-      #     name: Pull code from master branch for front-end
+          name: Pull code from "deploy branch" for api
 
       - run:
           name: Export SSH Environment Variables
@@ -64,11 +55,10 @@ jobs:
             echo "export PORT=${PORT}" >> $BASH_ENV
             echo "End env"
             scp $BASH_ENV $SSH_USER@$SSH_HOST:University-Schedule-Generator
-            # scp $BASH_ENV $SSH_USER@$SSH_HOST:schedule_generator_angular_app
             
       - run:
           command: ssh $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && source .bash_env* && echo before &&  source deploy.sh && echo after"
-          name: API Deployment
+          name: API Deployment using SSH
           # background: true
       # - run:
       #     command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd schedule_generator_angular_app && source .bash_env* &&  echo before && source deploy.sh && echo after"
