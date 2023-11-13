@@ -22,7 +22,7 @@ jobs:
   
   deploy_api:
     docker: # executor type
-      - image: docker pull linuxserver/openssh-server
+      - image: linuxserver/openssh-server
     environment:
       PREVIOUS_INSTANCE_NAME: CircleCITest
       NEW_INSTANCE_NAME: CircleCITest
