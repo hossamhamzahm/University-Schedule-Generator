@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import NeededCoursesJoiSchema from "../schema/needed_courses";
-import generate_tables from "../model/generate_tables_algorithm/generate_tables";
+import GenerateSchedules from "../service/GenerationAlgorithm/Generate";
 
 
 
@@ -25,9 +25,11 @@ const generate = async (req: Request, res: Response, next: NextFunction): Promis
 	const ed = strt + parseInt(limit as string) -1;
 
 	const needed_courses = (await NeededCoursesJoiSchema.validateAsync(req.body)).needed_courses;
-	const schedules = await generate_tables(needed_courses);
 	
+	const schedules = await GenerateSchedules(needed_courses);
+	console.log(needed_courses)
 	console.log("Number of generated schedules:", schedules.length)
+	
 
 	let responses = [];
 

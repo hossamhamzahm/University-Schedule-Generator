@@ -127,6 +127,18 @@ function get_instructors(api_course: IMap, section: IMap, users: Set<string>, in
     }
 }
 
+function hour24Converter(time: string){
+    const [clk, period] = time.split(' ');
+
+    if(period == "PM"){
+        if(clk.startsWith("12")){
+            return clk;
+        }
+        return (parseInt(clk.substring(0, 2)) + 12).toString() + ":" + clk.substring(2);
+    }
+    else return clk;
+}
+
 
 function get_section_time(api_course: IMap, section: IMap) {
     for (const schedule of api_course.schedules) {
@@ -134,8 +146,8 @@ function get_section_time(api_course: IMap, section: IMap) {
         section.section_day = schedule.dayDesc;
 
         // both are time of format  00:00:00
-        section.section_to = (new Date("July 1, 1999, " + schedule.endTime)).toISOString().split('T')[1].split('.')[0];
-        section.section_from = (new Date("July 1, 1999, " + schedule.startTime)).toISOString().split('T')[1].split('.')[0];
+        section.section_from = hour24Converter(schedule.startTime);
+        section.section_to = hour24Converter(schedule.endTime);
     }
 }
 
@@ -176,6 +188,7 @@ async function get_data() {
         if (!api_course.instructors) {
             api_course.instructors = [{ fullName: "Pending Instructor" }];
         }
+        
         get_instructors(api_course, section, users_string, instructors_string)
 
         // if section has no time skip it

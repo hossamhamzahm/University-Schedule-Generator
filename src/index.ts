@@ -62,25 +62,27 @@ app.use((err: ExpressError, req: express.Request, res: express.Response, next: e
 
 
 
-// app.listen(Config.port, async() => {
-//     await migrate()
-//     console.log("[New Build] Listening on port", Config.port)
-// });
 
 
-
-const sslServer = https.createServer({
-    key: fs.readFileSync(path.join(__dirname, "..", "cert", "privkey.pem")),
-    cert: fs.readFileSync(path.join(__dirname, "..", "cert", "fullchain.pem")),
-}, app)
-
-
-
-sslServer.listen(Config.port, async () => {
-    await migrate();
-    if (process.env.NODE_ENV != "test")
-        console.log(`Server is listening on port: ${Config.port}`);
-});
-
+if(process.env.NODE_ENV === "prod"){
+    const sslServer = https.createServer({
+        key: fs.readFileSync(path.join(__dirname, "..", "cert", "privkey.pem")),
+        cert: fs.readFileSync(path.join(__dirname, "..", "cert", "fullchain.pem")),
+    }, app)
+    
+    
+    
+    sslServer.listen(Config.port, async () => {
+        await migrate();
+        if (process.env.NODE_ENV != "test")
+            console.log(`Server is listening on port: ${Config.port}`);
+    });
+}
+else{
+    app.listen(Config.port, async() => {
+        await migrate()
+        console.log("[New Build] Listening on port", Config.port)
+    });
+}
 
 export default app;
