@@ -12,6 +12,7 @@ import SectionRouter from "./router/section";
 import InstructorRouter from "./router/instructor";
 import StudentRouter from "./router/student";
 import ScheduleRouter from "./router/schedule";
+import VisitRouter from "./router/visitCount";
 
 
 
@@ -35,6 +36,7 @@ app.use("/courses", CourseRouter);
 app.use("/sections", SectionRouter);
 app.use("/instructors", InstructorRouter);
 app.use("/schedules", ScheduleRouter);
+app.use("/visits", VisitRouter);
 app.use("/", StudentRouter);
 
 

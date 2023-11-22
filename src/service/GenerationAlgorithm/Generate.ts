@@ -1,6 +1,7 @@
 import ExtractCombinedSectionList from "./ExtractCombinedSectionList";
 import { SchedulePopulated, nullDay } from "../../@types/ScheduleInterfaces";
 import { clash, mark } from "./clash_or_mark";
+import VisitCount from "../../model/visitCount";
 
 
 let allPossibilities: SchedulePopulated[];
@@ -45,6 +46,16 @@ async function GenerateSchedules(course_list: string[]) {
     }
 
     await generate(0, course_list);
+
+    const visit_cnt = await VisitCount.findAll();
+
+    if (visit_cnt.length === 1){
+        visit_cnt[0].increment("total_cnt");
+        if(allPossibilities.length > 0) visit_cnt[0].increment("successfull_cnt");
+
+        await visit_cnt[0].save();
+    }
+
     return allPossibilities;
 }
 

@@ -2,6 +2,7 @@ import { Model, Op } from "sequelize";
 import Section from "../../model/section";
 import { CombinedCourse, NullDay, nullDay, SchedulePopulated } from "../../@types/ScheduleInterfaces";
 import MarkSlots from "./MarkSlots";
+import Course from "../../model/course";
 
 
 
@@ -9,6 +10,45 @@ import MarkSlots from "./MarkSlots";
 
 const ExtractCombinedSectionList = async (course_code: string): Promise<CombinedCourse[]> => {
     const combined_courses: CombinedCourse[] = [];
+
+
+    // skip if grad course
+    const course = await Course.findOne({
+        where: {
+            [Op.and]: [
+                {course_code: {
+                    [Op.like]: `%${course_code}%`
+                }},
+                {[Op.or]: [
+                    {course_name: {
+                        [Op.like]: `%${"graduation"}%`
+                    }},
+                    {course_name: {
+                        [Op.like]: `%${"Senior Project"}%`
+                    }},
+                ]}
+            ] 
+        }
+    });
+
+
+    if (course) return [{
+        course_code: course.getDataValue('course_code'),
+        same_lec: course,
+        same_tut: null,
+        same_lab: null,
+        combined_times: {
+            saturday: JSON.parse(JSON.stringify(nullDay)),
+            sunday: JSON.parse(JSON.stringify(nullDay)),
+            monday: JSON.parse(JSON.stringify(nullDay)),
+            tuesday: JSON.parse(JSON.stringify(nullDay)),
+            wednesday: JSON.parse(JSON.stringify(nullDay)),
+            thursday: JSON.parse(JSON.stringify(nullDay)),
+            friday: JSON.parse(JSON.stringify(nullDay)),
+        },
+    }];
+
+
 
     // get courses in course lecs
     const lecs = await Section.findAll({
