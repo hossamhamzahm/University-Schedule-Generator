@@ -2,9 +2,19 @@
 
 ### Project Idea
 This project focuses on building a schedule generator that generates all possible schedules for a prescribed list of courses entered by the user (using backtracking algorithm), then storing this list in a database. The generated schedules should have no conflicts or issues within it.
+<br>
 
 
+#### [Frontend Application Link](https://university-schedule-generator.vercel.app)
 
+#### [Backend API](https://gadwelooh-api.publicvm.com/courses)
+#### [Swagger API Documentation](https://gadwelooh-api.publicvm.com/api-docs)
+#### [Frontend React Code Repository](https://github.com/hossamhamzahm/university-schedule-generator-react)
+
+> Note: These links may stop working after AWS free tier ends for my account
+
+
+<br>
 
 ### Main objectives
     - Registering and saving users.
@@ -37,14 +47,6 @@ This project focuses on building a schedule generator that generates all possibl
     - Unit Testing
     - Linting/Prettier module
 
-
-#### [Front-End Application Link](http://fwd-forntend-circleci.s3-website-us-east-1.amazonaws.com/)
-#### [Backend API](https://gadwelooh-api.publicvm.com:3030/)
-#### [Swagger API Documentation](https://gadwelooh-api.publicvm.com:3030/api-docs)
-
-
-
-> Note: These link may stop working after AWS free tier ends for my account
 
 
 <br>

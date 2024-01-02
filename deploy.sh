@@ -3,7 +3,6 @@ npm i
 
 npm run build 
 
-# npm run migrate-dev
 
 # stop the current node server
 ps | grep node
@@ -13,13 +12,8 @@ else
   echo "No node process is found"
 fi
 
-
-npm run forever stop dist/index.js
-if [ $? -eq 0 ]; then
-  echo "stopped forever"
-else
-  echo "No node process is found"
-fi
+# stop previous forever runs
+npm run stop
 
 
 CERT_DIR="/etc/letsencrypt/live/$URL"
