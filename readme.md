@@ -39,8 +39,8 @@ This project focuses on building a schedule generator that generates all possibl
 
 
 #### [Front-End Application Link](http://fwd-forntend-circleci.s3-website-us-east-1.amazonaws.com/)
-#### [Backend API](http://gadwelooh-api.publicvm.com/)
-#### [Swagger API Documentation](http://gadwelooh-api.publicvm.com/api-docs)
+#### [Backend API](https://gadwelooh-api.publicvm.com:3030/)
+#### [Swagger API Documentation](https://gadwelooh-api.publicvm.com:3030/api-docs)
 
 
 
