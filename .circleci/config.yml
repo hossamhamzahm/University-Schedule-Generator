@@ -33,7 +33,7 @@ jobs:
             - "82:c7:cb:17:c7:59:2d:7b:b3:ab:db:22:e7:60:31:6c"
 
       - run:
-          command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && git pull origin deploy && rm .bash_env*"
+          command: ssh -o StrictHostKeyChecking=accept-new $SSH_USER@$SSH_HOST "cd University-Schedule-Generator && git pull origin deploy && if [ -f .bash_env* ] ; then rm .bash_env* ; fi"
           name: Pull code from "deploy branch" for api
 
       - run:
