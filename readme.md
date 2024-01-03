@@ -58,17 +58,13 @@ This project focuses on building a schedule generator that generates all possibl
 #### You can find database schemas documentation (ERD & Database Relational Model) in this [Lucid Chart link](https://lucid.app/lucidchart/238c4817-e201-4a96-a5cd-69d7dd223c0e/edit?viewport_loc=-128%2C136%2C2220%2C874%2C0_0&invitationId=inv_3bf38dd4-8c05-49e0-a5c8-3e51e1dfa39d)
 
 
-#### Documentation of the infrastructure is found in the [infrastructure description.md](https://github.com/hossamhamzahm/University_Schedule_Generator/blob/main/docs/Infrastructure%20description.md) file in the docs directory
+#### Documentation of all dependencies is found in the [App dependencies.md](https://github.com/hossamhamzahm/University-Schedule-Generator/blob/deploy/docs/App%20dependencies.md) file in the docs directory
 
 
-
-#### Documentation of all dependencies is found in the [App dependencies.md](https://github.com/hossamhamzahm/University_Schedule_Generator/blob/main/docs/App%20dependencies.md) file in the docs directory
-
-
-#### A screenshot of the last build is found the [docs directory](https://github.com/hossamhamzahm/University_Schedule_Generator/tree/main/docs) in the Github repository 
+#### A screenshot of the last build is found the [docs directory](https://github.com/hossamhamzahm/University-Schedule-Generator/tree/deploy/docs) in the Github repository 
 
 
-#### Documentation of the pipeline is found in the [Pipeline process.md](https://github.com/hossamhamzahm/University_Schedule_Generator/blob/main/docs/Pipeline%20process.md) file in the docs directory
+#### Documentation of the pipeline is found in the [Pipeline process.md](https://github.com/hossamhamzahm/University-Schedule-Generator/blob/deploy/docs/Pipeline%20process.md) file in the docs directory
 
 
 > Click on the status icon to view the pipeline
@@ -76,4 +72,4 @@ This project focuses on building a schedule generator that generates all possibl
 
 
 #### Architecture diagram for an overview of the infrastructure and the pipeline
-[![architecture diagram](https://raw.githubusercontent.com/hossamhamzahm/University_Schedule_Generator/main/docs/architecture_diagram.png)]() 
+[![architecture diagram](https://raw.githubusercontent.com/hossamhamzahm/University-Schedule-Generator/deploy/docs/architecture_diagram.png)]() 
